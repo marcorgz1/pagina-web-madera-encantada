@@ -1,14 +1,18 @@
-# Astro Starter Kit: Basics
+# 🏡 Catálogo de Casas Prefabricadas
 
-```sh
-pnpm create astro@latest -- --template basics
-```
+Bienvenido a MADERA ENCANTADA. Una página web construida con el framework moderno Astro 6 dedicada a ofrecer información y un catálogo sobre casas prefabricadas. El principal objetivo de la misma es ayudar a los usuarios a descubrir diferentes modelos, características y opciones disponibles en el mercado de la construcción modular.
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
 
-## 🚀 Project Structure
+## 🚀 Características
 
-Inside of your Astro project, you'll see the following folders and files:
+- 📋 Catálogo de casas prefabricadas
+- 🏠 Fichas detalladas de cada modelo
+- 💰 Información detallada sobre cada uno de los productos
+- 🔍 Navegación sencilla e intuitiva
+- 👤 Formulario de contacto
+
+
+## 📂 Estructura del proyecto
 
 ```text
 /
@@ -19,6 +23,8 @@ Inside of your Astro project, you'll see the following folders and files:
 │   │   └── astro.svg
 │   ├── components
 │   │   └── Welcome.astro
+|   |   └── Hero.astro
+|   |   └── Main.astro
 │   ├── layouts
 │   │   └── Layout.astro
 │   └── pages
@@ -26,21 +32,23 @@ Inside of your Astro project, you'll see the following folders and files:
 └── package.json
 ```
 
-To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
 
-## 🧞 Commands
+## ⚙️ Instalación y uso
 
-All commands are run from the root of the project, from a terminal:
+1. Clonar este repositorio:
+   ```bash
+   git clone https://github.com/marcorgz1/pagina-web-madera-encatada.git
+   ```
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `pnpm install`             | Installs dependencies                            |
-| `pnpm dev`             | Starts local dev server at `localhost:4321`      |
-| `pnpm build`           | Build your production site to `./dist/`          |
-| `pnpm preview`         | Preview your build locally, before deploying     |
-| `pnpm astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `pnpm astro -- --help` | Get help using the Astro CLI                     |
+2. Acceder al proyecto:
+  ```bash
+  cd pagina-web-madera-encantada
+  ```
 
-## 👀 Want to learn more?
+3. Instalar dependencias necesaria y arrancar el servidor:
+  ```bash
+  npm install
+  npm run dev
+  ```
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+Una vez arrancado, podrás visualizarlo accediendo a la ruta `http://localhost:4321` desde tu navegador.
