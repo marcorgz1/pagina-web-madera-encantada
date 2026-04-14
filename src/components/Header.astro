@@ -1,11 +1,11 @@
+---
+import brandLogo from '@/assets/brand-logo.png';
+---
+
 <header class="fixed top-0 w-full z-50 bg-yellow-100/80 backdrop-blur-md border-b border-border/50">
-        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+        <div class="container mx-auto px-6 flex justify-between items-center">
           <div class="flex items-center gap-2">
-            <span class="font-heading text-xl font-semibold uppercase">
-				Madera
-				<br />
-				encantada
-			</span>
+            <img src={brandLogo.src} alt="website brand logo" width={220} height={240} />
           </div>
           <nav class="hidden md:flex items-center gap-8 text-sm font-body text-muted-foreground">
             <a href="#about-us" class="hover:text-foreground transition-colors">Sobre nosotros</a>
