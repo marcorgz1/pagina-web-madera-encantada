@@ -14,52 +14,52 @@ const senators = [
         id: "1",
         name: "Primer senador",
         image: image,
-        price: "$45,000"
+        price: "9.800€"
     },
     {
         id: "2",
         name: "Segundo senador",
         image: image2,
-        price: "$128,000"
+        price: "6.500€"
     },
     {
         id: "3",
         name: "Tercer senador",
         image: image3,
-        price: "$295,000"
+        price: "7.800€"
     },
     {
         id: "4",
         name: "Cuarto senador",
         image: image4,
-        price: "$78,000"
+        price: "6.900€"
     },
     {
         id: "5",
         name: "Quinto senador",
         image: image5,
-        price: "$105,000"
+        price: "6.700€"
     },
     {
         id: "6",
         name: "Sexto senador",
         image: image6,
-        price: "$32,000"
+        price: "5.200€"
     },
     {
         id: "7",
         name: "Séptimo senador",
         image: image7,
-        price: "$32,000"
+        price: "7.900€"
     }
 ];
 ---
 
 <main class="mx-auto text-center mb-48">
     <h1 class="text-6xl font-bold mb-24">Nuestros proyectos</h1>
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mx-auto w-full px-32">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mx-auto w-full px-32">
         {senators.map((senator) => (
-            <div class="group overflow-hidden border-border/50 p-6 hover:shadow-xl transition-all duration-500 hover:-translate-y-1">
+            <div class="group overflow-hidden border-border/50 px-4 py-2 hover:shadow-xl transition-all duration-500 hover:-translate-y-1">
                 <Image
                     src={senator.image}
                     alt={senator.name}
@@ -68,11 +68,15 @@ const senators = [
                     class="w-full h-56 object-fit mb-4 transition-transform duration-700 group-hover:scale-105"
                 />
                 <div class="p-5 space-y-6">
-                    <div class="flex items-start justify-between">
-                        <h3 class="font-heading text-xl font-semibold">{senator.name}</h3>
-                        <span class="text-emerald-600 font-semibold text-lg">{senator.price}</span>
+                    <h3 class="font-heading text-2xl font-semibold mb-6">{senator.name}</h3>
+                    <div class="flex justify-between items-center">
+                        <p>Desde</p>
+                        <p class="text-emerald-600 font-semibold text-xl">{senator.price}</p>
                     </div>
-                    <button class="text-white text-sm font-semibold px-4 py-2 rounded-lg mt-8 cursor-pointer bg-emerald-600 hover:bg-emerald-700 transition-colors duration-500">
+                    <div class="flex items-start justify-between">
+                        
+                    </div>
+                    <button class="text-white text-sm font-semibold px-4 py-2 w-full rounded-lg mt-8 cursor-pointer bg-emerald-600 hover:bg-emerald-700 transition-colors duration-500">
                         Ver más
                     </button>
                 </div>

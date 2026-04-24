@@ -1,20 +1,23 @@
 ---
-import brandLogo from '@/assets/brand-logo.png';
+import brandLogo from '@/assets/logo.png'
 import { Instagram, Facebook, Twitter } from 'lucide-astro'
 ---
 
 <footer class="bg-gray-900 text-white">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-    <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
-        <div class="flex flex-col gap-4 col-span-1 md:col-span-2">
-            <div class="flex items-center space-x-2 mb-4">
-                <span class="text-2xl font-bold">DreamHomes</span>
+        <div class="max-w-screen-2xl mx-auto sm:px-6 lg:px-8 py-20">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-8">
+            <div class="col-span-1 md:col-span-2">
+            <div class="flex space-x-4 mb-8">
+                <img src={brandLogo.src} alt="brand logo" class="w-48 h-42">
             </div>
             <p class="text-gray-400 mb-4 max-w-md leading-relaxed">
-                Somos una empresa fundada con el objetivo de transformar el concepto tradicional de vivienda,
-                como respuesta a la creciente demanda de soluciones habitacionales más eficientes, sostenibles
-                y accesibles. Apostamos por el desarrollo de casas prefabricadas que combinan diseño contemporáneo, innovación tecnológica y altos estándares de calidad.
-                <!-- Building quality pre-made homes for modern living. Your dream home is ready when you are. -->
+                Somos una empresa fundada con el objetivo de transformar
+                el concepto tradicional de vivienda, como respuesta a la
+                creciente demanda de soluciones habitacionales más
+                eficientes, sostenibles y accesibles. Apostamos por el
+                desarrollo de casas prefabricadas que combinan diseño
+                contemporáneo, innovación tecnológica y altos estándares
+                de calidad.
             </p>
             <div class="flex space-x-4">
                 <a href="#" class="text-gray-400 hover:text-emerald-500 transition-colors">
@@ -29,90 +32,255 @@ import { Instagram, Facebook, Twitter } from 'lucide-astro'
             </div>
         </div>
 
-        <div class="flex flex-col gap-4">
-            <h3 class="text-lg font-bold mb-4">Accesos rápidos</h3>
+            <div>
+            <h3 class="text-lg font-bold mb-4">Quick Links</h3>
             <ul class="space-y-2">
                 <li>
-                    <a href="#homes" class="text-gray-400 hover:text-emerald-500 transition-colors">
-                        Nuestras casas
-                    </a>
+                <a href="#homes" class="text-gray-400 hover:text-emerald-500 transition-colors">
+                    Our Homes
+                </a>
                 </li>
                 <li>
-                    <a href="#contact" class="text-gray-400 hover:text-emerald-500 transition-colors">
-                        Sobre nosotros
-                    </a>
+                <a href="#contact" class="text-gray-400 hover:text-emerald-500 transition-colors">
+                    Contact Us
+                </a>
                 </li>
                 <li>
-                    <a href="#" class="text-gray-400 hover:text-emerald-500 transition-colors">
-                        Contáctanos
-                    </a>
+                <a href="#" class="text-gray-400 hover:text-emerald-500 transition-colors">
+                    About Us
+                </a>
                 </li>
                 <li>
-                    <a href="#" class="text-gray-400 hover:text-emerald-500 transition-colors">
-                        FAQ
-                    </a>
+                <a href="#" class="text-gray-400 hover:text-emerald-500 transition-colors">
+                    FAQ
+                </a>
                 </li>
             </ul>
+            </div>
+
+            <div class="flex flex-col gap-2">
+                <h3 class="text-lg font-bold mb-4">Contacto</h3>
+                <ul class="space-y-6 text-gray-400">
+                    <li class="flex items-center gap-2">
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="24"
+                                height="24"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                class="icon icon-tabler icons-tabler-outline icon-tabler-mail"
+                                ><path
+                                    stroke="none"
+                                    d="M0 0h24v24H0z"
+                                    fill="none"></path><path
+                                    d="M3 7a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-10"
+                                ></path><path d="M3 7l9 6l9 -6"></path></svg
+                            >
+                            <a
+                                href="mailto:info@maderaencantada.com"
+                                class="hover:text-emerald-500 transition-colors"
+                                >info@maderaencantada.com</a
+                            >
+                        </li>
+                        <li class="flex gap-4">
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="24"
+                                height="24"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                class="icon icon-tabler icons-tabler-outline icon-tabler-phone"
+                                ><path
+                                    stroke="none"
+                                    d="M0 0h24v24H0z"
+                                    fill="none"></path><path
+                                    d="M5 4h4l2 5l-2.5 1.5a11 11 0 0 0 5 5l1.5 -2.5l5 2v4a2 2 0 0 1 -2 2a16 16 0 0 1 -15 -15a2 2 0 0 1 2 -2"
+                                ></path></svg
+                            >
+                            <div
+                                class="flex flex-col gap-2 w-full"
+                            >
+                                <a
+                                    href="tel:+34652447192"
+                                    class="hover:text-emerald-500 transition-colors"
+                                    >+34 652 447 192</a
+                                >
+                                <a
+                                    href="tel:+34613336085"
+                                    class="hover:text-emerald-500 transition-colors"
+                                    >+34 613 336 085</a
+                                >
+                            </div>
+                        </li>
+                </ul>
+            </div>
         </div>
 
-        <div class="flex flex-col gap-4">
-            <h3 class="text-lg font-bold mb-4">Contacto</h3>
-            <ul class="space-y-2 text-gray-400">
-                <li class="flex items-center gap-2">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-mail"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M3 7a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-10" /><path d="M3 7l9 6l9 -6" /></svg>
-                    <a href="mailto:info@maderaencantada.com" class="hover:text-foreground transition-colors">info@maderaencantada.com</a>
-                </li>
-                <li class="flex items-center gap-2">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-phone"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M5 4h4l2 5l-2.5 1.5a11 11 0 0 0 5 5l1.5 -2.5l5 2v4a2 2 0 0 1 -2 2a16 16 0 0 1 -15 -15a2 2 0 0 1 2 -2" /></svg>
-                    <a href="tel:+34666666666" class="hover:text-foreground transition-colors">+34 666 66 66 66</a>
-                </li>
-            </ul>
+        <div class="border-t border-gray-800 pt-16 text-center text-gray-400">
+            <p>&copy; 2026 Madera Encantada. Todos los derechos reservados.</p>
         </div>
-    </div>
-
-    <div class="border-t border-gray-800 pt-8 text-center text-gray-400">
-        <p>&copy; 2026 Madera encantada. Todos los derechos reservados.</p>
-    </div>
     </div>
 </footer>
+
 <!-- 
-<footer class="bg-gray-100">
-    <div class="grid grid-cols-3 md:grid-cols-[2fr_1fr_1fr] gap-48 max-w-6xl mx-auto py-12 pb-10">
-        <div class="flex flex-col gap-4 mt-0">
-            <img src={brandLogo.src} alt="website brand logo" width={260} height={280} />
-            <p>
-                Somos una empresa fundada con el objetivo de transformar el concepto tradicional de vivienda,
-                como respuesta a la creciente demanda de soluciones habitacionales más eficientes, sostenibles
-                y accesibles. Inspirados por la evolución de la construcción industrializada, apostamos por el desarrollo
-                de casas prefabricadas que combinan diseño contemporáneo, innovación tecnológica y altos estándares de calidad.
-            </p>
+<footer class="bg-gray-900 text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div class="grid grid-cols-1 gap-8 mb-8">
+            <div class="col-span-1 md:col-span-2">
+                <div class="flex flex-col justify-center gap-6">
+                    <img
+                        src={brandLogo.src}
+                        alt="brand logo"
+                        class="w-36 h-32 mx-auto"
+                    />
+                    <p class="text-gray-400 mb-4 max-w-md leading-relaxed">
+                        Somos una empresa fundada con el objetivo de transformar
+                        el concepto tradicional de vivienda, como respuesta a la
+                        creciente demanda de soluciones habitacionales más
+                        eficientes, sostenibles y accesibles. Apostamos por el
+                        desarrollo de casas prefabricadas que combinan diseño
+                        contemporáneo, innovación tecnológica y altos estándares
+                        de calidad.
+                        Building quality pre-made homes for modern living. Your dream home is ready when you are.
+                    </p>
+                    <div class="flex items-start gap-4">
+                        <a
+                            href="#"
+                            class="text-gray-400 hover:text-emerald-500 transition-colors"
+                        >
+                            <Facebook class="h-6 w-6" />
+                        </a>
+                        <a
+                            href="#"
+                            class="text-gray-400 hover:text-emerald-500 transition-colors"
+                        >
+                            <Twitter class="h-6 w-6" />
+                        </a>
+                        <a
+                            href="#"
+                            class="text-gray-400 hover:text-emerald-500 transition-colors"
+                        >
+                            <Instagram class="h-6 w-6" />
+                        </a>
+                    </div>
+                </div>
+
+                <div class="flex flex-col gap-4">
+                    <h3 class="text-lg font-bold mb-4">Accesos rápidos</h3>
+                    <ul class="space-y-2">
+                        <li>
+                            <a
+                                href="#homes"
+                                class="text-gray-400 hover:text-emerald-500 transition-colors"
+                            >
+                                Nuestras casas
+                            </a>
+                        </li>
+                        <li>
+                            <a
+                                href="#contact"
+                                class="text-gray-400 hover:text-emerald-500 transition-colors"
+                            >
+                                Sobre nosotros
+                            </a>
+                        </li>
+                        <li>
+                            <a
+                                href="#"
+                                class="text-gray-400 hover:text-emerald-500 transition-colors"
+                            >
+                                Contáctanos
+                            </a>
+                        </li>
+                        <li>
+                            <a
+                                href="#"
+                                class="text-gray-400 hover:text-emerald-500 transition-colors"
+                            >
+                                FAQ
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="flex flex-col gap-4">
+                    <h3 class="text-lg font-bold mb-4">Contacto</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li class="flex items-center gap-2">
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="24"
+                                height="24"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                class="icon icon-tabler icons-tabler-outline icon-tabler-mail"
+                                ><path
+                                    stroke="none"
+                                    d="M0 0h24v24H0z"
+                                    fill="none"></path><path
+                                    d="M3 7a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-10"
+                                ></path><path d="M3 7l9 6l9 -6"></path></svg
+                            >
+                            <a
+                                href="mailto:info@maderaencantada.com"
+                                class="hover:text-foreground transition-colors"
+                                >info@maderaencantada.com</a
+                            >
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="24"
+                                height="24"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                class="icon icon-tabler icons-tabler-outline icon-tabler-phone"
+                                ><path
+                                    stroke="none"
+                                    d="M0 0h24v24H0z"
+                                    fill="none"></path><path
+                                    d="M5 4h4l2 5l-2.5 1.5a11 11 0 0 0 5 5l1.5 -2.5l5 2v4a2 2 0 0 1 -2 2a16 16 0 0 1 -15 -15a2 2 0 0 1 2 -2"
+                                ></path></svg
+                            >
+                            <div
+                                class="flex flex-col items-center gap-4 w-full"
+                            >
+                                <a
+                                    href="tel:+34652447192"
+                                    class="hover:text-emerald-600 duration-500 transition-colors"
+                                    >+34 652 447 192</a
+                                >
+                                <a
+                                    href="tel:+34613336085"
+                                    class="hover:text-emerald-600 duration-500 transition-colors"
+                                    >+34 613 336 085</a
+                                >
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </div>
-        <div class="flex flex-col gap-8">
-            <h3 class="text-2xl font-bold">Accesos rápidos</h3>
-            <ul class="flex flex-col gap-2">
-                <li><a href="#about-us" class="hover:text-foreground transition-colors">Sobre nosotros</a></li>
-                <li><a href="#information" class="hover:text-foreground transition-colors">Información</a></li>
-                <li><a href="#store" class="hover:text-foreground transition-colors">Nuestras casas</a></li>
-                <li><a href="#contact" class="hover:text-foreground transition-colors">Contacto</a></li>
-            </ul>
-        </div>
-        <div class="flex flex-col gap-8">
-            <h3 class="text-2xl font-bold">Contacto</h3>
-            <ul class="flex flex-col gap-2">
-                <li class="flex items-center gap-2">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-mail"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M3 7a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-10" /><path d="M3 7l9 6l9 -6" /></svg>
-                    <a href="mailto:info@maderaencantada.com" class="hover:text-foreground transition-colors">info@maderaencantada.com</a>
-                </li>
-                <li class="flex items-center gap-2">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-phone"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M5 4h4l2 5l-2.5 1.5a11 11 0 0 0 5 5l1.5 -2.5l5 2v4a2 2 0 0 1 -2 2a16 16 0 0 1 -15 -15a2 2 0 0 1 2 -2" /></svg>
-                    <a href="tel:+34666666666" class="hover:text-foreground transition-colors">+34 666 66 66 66</a>
-                </li>
-            </ul>
+
+        <div class="border-t border-gray-800 pt-8 text-center text-gray-400">
+            <p>&copy; 2026 Madera encantada. Todos los derechos reservados.</p>
         </div>
     </div>
-    <hr class="py-6">
-    <div class="flex justify-center items-center">
-        © 2026 Madera encantada. Todos los derechos reservados.
-    </div>
-</footer>
+</footer> 
 -->
