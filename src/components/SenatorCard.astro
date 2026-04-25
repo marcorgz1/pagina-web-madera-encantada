@@ -1,1 +1,57 @@
-<!-- TODO: Maybe reutilizable component -->
+---
+import { Image } from 'astro:assets'
+const { name, image, price } = Astro.props
+---
+
+<article
+    class="group relative flex flex-col bg-white overflow-hidden rounded-2xl shadow-sm hover:shadow-2xl transition-all duration-500 hover:-translate-y-1.5 border border-stone-100"
+>
+    <!-- Image wrapper -->
+    <div class="relative overflow-hidden aspect-[4/3] bg-stone-50">
+        <Image
+            src={image}
+            alt={name}
+            loading="lazy"
+            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+        />
+        <!-- Subtle gradient overlay at bottom of image -->
+        <div
+            class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+        >
+        </div>
+    </div>
+
+    <!-- Content -->
+    <div class="flex flex-col gap-4 p-6">
+        <div class="flex items-end justify-between">
+            <div class="flex flex-col gap-0.5">
+                <span
+                    class="text-xs uppercase tracking-widest text-stone-400 font-medium"
+                    >Desde</span
+                >
+                <span class="text-2xl font-bold text-emerald-700 leading-none"
+                    >{price}</span
+                >
+            </div>
+
+            <a
+                href="#"
+                class="inline-flex items-center gap-2 px-5 py-2.5 bg-emerald-600 text-white text-sm font-medium rounded-xl hover:bg-emerald-700 transition-colors duration-300 group/btn"
+            >
+                Ver más
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="w-4 h-4 translate-x-0 group-hover/btn:translate-x-1 transition-transform duration-200"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                >
+                    <path d="M5 12h14M12 5l7 7-7 7"></path>
+                </svg>
+            </a>
+        </div>
+    </div>
+</article>

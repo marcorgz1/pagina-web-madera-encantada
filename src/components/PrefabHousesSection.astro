@@ -1,0 +1,132 @@
+---
+import house from '@/assets/houses/house.jpg'
+import house2 from '@/assets/houses/house2.jpg'
+import house3 from '@/assets/houses/house3.jpeg'
+import house4 from '@/assets/houses/house4.jpg'
+import house5 from '@/assets/houses/house5.jpg'
+import house6 from '@/assets/houses/house6.jpeg'
+import house7 from '@/assets/houses/house7.jpg'
+import house8 from '@/assets/houses/house8.jpeg'
+
+import PrefabHouseCard from '@/components/PrefabHouseCard.astro'
+
+const prefab_houses = [
+    {
+        id: '1',
+        name: 'Primera casa prefabricada',
+        image: house,
+        price: '9.800€',
+    },
+    {
+        id: '2',
+        name: 'Segunda casa prefabricada',
+        image: house2,
+        price: '6.500€',
+    },
+    {
+        id: '3',
+        name: 'Tercera casa prefabricada',
+        image: house3,
+        price: '7.800€',
+    },
+    {
+        id: '4',
+        name: 'Cuarta casa prefabricada',
+        image: house4,
+        price: '6.900€',
+    },
+    {
+        id: '5',
+        name: 'Quinta casa prefabricada',
+        image: house5,
+        price: '6.700€',
+    },
+    {
+        id: '6',
+        name: 'Sexta casa prefabricada',
+        image: house6,
+        price: '5.200€',
+    },
+    {
+        id: '7',
+        name: 'Séptima casa prefabricada',
+        image: house7,
+        price: '7.900€',
+    },
+    {
+        id: '8',
+        name: 'Octava casa prefabricada',
+        image: house8,
+        price: '7.900€',
+    },
+]
+
+const prefab_houses__price = 1300
+---
+
+<main id="prefab-houses" class="py-24 px-4">
+    <div class="max-w-7xl mx-auto">
+        <div
+            class="mb-14 flex flex-col items-center sm:flex-row sm:items-end sm:justify-between gap-4"
+        >
+            <div class="flex flex-col gap-2">
+                <p
+                    class="text-xs font-medium tracking-widest uppercase text-stone-400 mb-2"
+                >
+                    Construcción moderna
+                </p>
+                <h1
+                    class="text-5xl font-bold leading-tight text-stone-800 mb-4"
+                >
+                    Casas <span class="text-amber-800">prefabricadas</span>
+                </h1>
+            </div>
+            <p
+                class="text-stone-500 max-w-xs text-sm leading-relaxed sm:text-right"
+            >
+                Diseño inteligente, construcción rápida, hogar real.
+            </p>
+        </div>
+        <div class="w-full h-px bg-stone-200 mb-14"></div>
+        <div
+            class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mx-auto w-full px-32 mb-24"
+        >
+            {
+                prefab_houses.map((prefab_house) => (
+                    <PrefabHouseCard
+                        name={prefab_house.name}
+                        image={prefab_house.image}
+                    />
+                ))
+            }
+        </div>
+        <div class="flex justify-center items-center gap-4 mb-24">
+            <span class="text-2xl font-light text-stone-400">Precio desde</span>
+            <div class="w-px h-8 bg-stone-200 self-center"></div>
+            <span
+                class="font-serif text-6xl font-bold text-emerald-800 leading-none"
+            >
+                {prefab_houses__price}
+            </span>
+            <span class="text-lg text-stone-400 mb-1">€ · IVA incl.</span>
+        </div>
+        <a
+            href="#"
+            class="text-white text-lg font-medium w-fit mx-auto flex justify-center items-center gap-2 px-4 py-2 rounded-lg bg-emerald-500 hover:bg-emerald-600 transition-colors"
+        >
+            Más información
+            <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="text-white w-4 h-4 translate-x-0 group-hover/btn:translate-x-1 transition-transform duration-200"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"                
+            >
+                <path d="M5 12h14M12 5l7 7-7 7"></path>
+            </svg>
+        </a>
+    </div>
+</main>

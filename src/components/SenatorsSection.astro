@@ -1,86 +1,94 @@
 ---
-import { Image } from "astro:assets";
+import { Image } from 'astro:assets'
 
-import image from '@/assets/senators/image.jpeg';
-import image2 from '@/assets/senators/image2.jpeg';
-import image3 from '@/assets/senators/image3.jpeg';
-import image4 from '@/assets/senators/image4.webp';
-import image5 from '@/assets/senators/image5.webp';
-import image6 from '@/assets/senators/image6.jpeg';
-import image7 from '@/assets/senators/image7.webp';
+import image from '@/assets/senators/image.jpeg'
+import image2 from '@/assets/senators/image2.jpeg'
+import image3 from '@/assets/senators/image3.jpeg'
+import image4 from '@/assets/senators/image4.webp'
+import image5 from '@/assets/senators/image5.jpeg'
+import image6 from '@/assets/senators/image6.jpg'
+import SenatorCard from './SenatorCard.astro'
 
 const senators = [
     {
-        id: "1",
-        name: "Primer senador",
+        id: '1',
+        name: 'Primer senador',
         image: image,
-        price: "9.800€"
+        price: '9.800€',
     },
     {
-        id: "2",
-        name: "Segundo senador",
+        id: '2',
+        name: 'Segundo senador',
         image: image2,
-        price: "6.500€"
+        price: '6.500€',
     },
     {
-        id: "3",
-        name: "Tercer senador",
+        id: '3',
+        name: 'Tercer senador',
         image: image3,
-        price: "7.800€"
+        price: '7.800€',
     },
     {
-        id: "4",
-        name: "Cuarto senador",
+        id: '4',
+        name: 'Cuarto senador',
         image: image4,
-        price: "6.900€"
+        price: '6.900€',
     },
     {
-        id: "5",
-        name: "Quinto senador",
+        id: '5',
+        name: 'Quinto senador',
         image: image5,
-        price: "6.700€"
+        price: '5.200€',
     },
     {
-        id: "6",
-        name: "Sexto senador",
+        id: '6',
+        name: 'Sexto senador',
         image: image6,
-        price: "5.200€"
+        price: '7.900€',
     },
-    {
-        id: "7",
-        name: "Séptimo senador",
-        image: image7,
-        price: "7.900€"
-    }
-];
+]
 ---
 
-<main class="mx-auto text-center mb-48">
-    <h1 class="text-6xl font-bold mb-24">Nuestros proyectos</h1>
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mx-auto w-full px-32">
-        {senators.map((senator) => (
-            <div class="group overflow-hidden border-border/50 px-4 py-2 hover:shadow-xl transition-all duration-500 hover:-translate-y-1">
-                <Image
-                    src={senator.image}
-                    alt={senator.name}
-                    width={800}
-                    height={600}
-                    class="w-full h-56 object-fit mb-4 transition-transform duration-700 group-hover:scale-105"
-                />
-                <div class="p-5 space-y-6">
-                    <h3 class="font-heading text-2xl font-semibold mb-6">{senator.name}</h3>
-                    <div class="flex justify-between items-center">
-                        <p>Desde</p>
-                        <p class="text-emerald-600 font-semibold text-xl">{senator.price}</p>
-                    </div>
-                    <div class="flex items-start justify-between">
-                        
-                    </div>
-                    <button class="text-white text-sm font-semibold px-4 py-2 w-full rounded-lg mt-8 cursor-pointer bg-emerald-600 hover:bg-emerald-700 transition-colors duration-500">
-                        Ver más
-                    </button>
-                </div>
+<section id="senators" class="py-24 px-4">
+    <div class="max-w-7xl mx-auto">
+        <!-- Header -->
+        <div
+            class="mb-14 flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4"
+        >
+            <div>
+                <span
+                    class="text-xs uppercase tracking-[0.2em] text-emerald-600 font-semibold mb-3 block"
+                >
+                    Galería
+                </span>
+                <h2
+                    class="text-5xl sm:text-6xl font-bold text-amber-800 leading-none tracking-tight"
+                >
+                    Cenadores
+                </h2>
             </div>
-        ))}
+            <p
+                class="text-stone-500 max-w-xs text-sm leading-relaxed sm:text-right"
+            >
+                Espacios únicos para disfrutar del exterior con estilo y confort
+                todo el año.
+            </p>
+        </div>
+
+        <!-- Divider -->
+        <div class="w-full h-px bg-stone-200 mb-14"></div>
+
+        <!-- Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12">
+            {
+                senators.map((senator) => (
+                    <SenatorCard
+                        name={senator.name}
+                        image={senator.image}
+                        price={senator.price}
+                    />
+                ))
+            }
+        </div>
     </div>
-</main>
+</section>

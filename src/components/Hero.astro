@@ -1,10 +1,10 @@
 ---
 import { ArrowRight } from 'lucide-astro'
-import heroImage from '@/assets/houses/house.jpeg';
+import heroImage from '@/assets/houses/house.jpg';
 ---
 
 <section class="relative h-[85vh] flex items-center justify-center overflow-hidden mb-32">
-    <img src={heroImage.src} alt="hero house image" class="absolute overflow-y-clip w-full h-full object-cover object-[75%_10%]" />
+    <img src={heroImage.src} alt="hero house image" class="absolute overflow-y-clip w-full h-full object-cover" />
     <div class="absolute inset-0 bg-black/70"></div>
     <div class="relative flex flex-col justify-center items-center gap-14 px-10 text-white z-10"> 
         <h1 class="text-6xl font-bold text-center">
@@ -17,10 +17,10 @@ import heroImage from '@/assets/houses/house.jpeg';
             <br />
             cómodamente. Con un diseño elegante y una gran calidad de construcción
         </h3>
-        <button class="bg-green-700 text-white hover:bg-green-800 rounded 
+        <a href="#prefab-houses" class="bg-green-700 text-white decoration-0 hover:bg-green-800 rounded 
                     flex justify-center items-center gap-4 px-6 py-2 font-semibold cursor-pointer transition-colors">
             Nuestras casas
             <ArrowRight size={20} />
-        </button>
+        </a>
     </div>
 </section>

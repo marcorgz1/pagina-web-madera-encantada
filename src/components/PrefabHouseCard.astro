@@ -1,0 +1,17 @@
+---
+import { Image } from 'astro:assets'
+const { name, image } = Astro.props
+---
+
+<div class="group overflow-hidden border-border/50 hover:shadow-xl transition-all duration-500 hover:-translate-y-1">
+    <div class="relative overflow-hidden">
+        <Image
+            src={image}
+            alt={name}
+            loading="lazy"
+            width={800}
+            height={600}
+            class="w-full h-56 object-cover transition-transform duration-700 group-hover:scale-110"
+        />
+    </div>
+</div>
