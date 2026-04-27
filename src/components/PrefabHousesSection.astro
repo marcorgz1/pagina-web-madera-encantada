@@ -1,4 +1,7 @@
 ---
+import { Image } from 'astro:assets';
+import { ArrowRight } from 'lucide-astro';
+
 import house from '@/assets/houses/house.jpg'
 import house2 from '@/assets/houses/house2.jpg'
 import house3 from '@/assets/houses/house3.jpeg'
@@ -7,8 +10,6 @@ import house5 from '@/assets/houses/house5.jpg'
 import house6 from '@/assets/houses/house6.jpeg'
 import house7 from '@/assets/houses/house7.jpg'
 import house8 from '@/assets/houses/house8.jpeg'
-
-import PrefabHouseCard from '@/components/PrefabHouseCard.astro'
 
 const prefab_houses = [
     {
@@ -76,7 +77,7 @@ const prefab_houses__price = 1300
                     Construcción moderna
                 </p>
                 <h1
-                    class="text-5xl font-bold leading-tight text-stone-800 mb-4"
+                    class="text-5xl font-serif leading-tight text-stone-800 mb-4"
                 >
                     Casas <span class="text-amber-800">prefabricadas</span>
                 </h1>
@@ -89,13 +90,15 @@ const prefab_houses__price = 1300
         </div>
         <div class="w-full h-px bg-stone-200 mb-14"></div>
         <div
-            class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mx-auto w-full px-32 mb-24"
+            class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mx-auto w-full mb-24"
         >
             {
                 prefab_houses.map((prefab_house) => (
-                    <PrefabHouseCard
-                        name={prefab_house.name}
-                        image={prefab_house.image}
+                    <Image
+                        src={prefab_house.image}
+                        alt={prefab_house.name}
+                        loading="lazy"
+                        class="w-full h-full object-cover transition-transform duration-800 hover:scale-110"
                     />
                 ))
             }
@@ -110,23 +113,14 @@ const prefab_houses__price = 1300
             </span>
             <span class="text-lg text-stone-400 mb-1">€ · IVA incl.</span>
         </div>
-        <a
-            href="#"
-            class="text-white text-lg font-medium w-fit mx-auto flex justify-center items-center gap-2 px-4 py-2 rounded-lg bg-emerald-500 hover:bg-emerald-600 transition-colors"
-        >
-            Más información
-            <svg
-                xmlns="http://www.w3.org/2000/svg"
-                class="text-white w-4 h-4 translate-x-0 group-hover/btn:translate-x-1 transition-transform duration-200"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"                
+        <div class="flex justify-center items-center mx-auto">
+            <a 
+                href="#contact" 
+                class="flex justify-center items-center font-semibold border border-gray-300 px-4 py-2 rounded-lg hover:bg-emerald-800 hover:text-white transition-colors"
             >
-                <path d="M5 12h14M12 5l7 7-7 7"></path>
-            </svg>
-        </a>
+                Solicitar información 
+                <ArrowRight className="ml-2 h-4 w-4" />
+            </a>
+        </div>
     </div>
 </main>
