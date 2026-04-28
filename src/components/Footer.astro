@@ -1,5 +1,6 @@
 ---
 import brandLogo from '@/assets/logo.png'
+import { Image } from 'astro:assets';
 import { Instagram, Facebook, Twitter } from 'lucide-astro'
 ---
 
@@ -8,7 +9,11 @@ import { Instagram, Facebook, Twitter } from 'lucide-astro'
         <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-8">
             <div class="col-span-1 md:col-span-2">
             <div class="flex space-x-4 mb-8">
-                <img src={brandLogo.src} alt="brand logo" class="w-48 h-42">
+                <Image 
+                    src={brandLogo} 
+                    alt="brand logo" 
+                    class="w-42 h-36"
+                >
             </div>
             <p class="text-gray-400 mb-4 max-w-md leading-relaxed">
                 Somos una empresa fundada con el objetivo de transformar

@@ -36,84 +36,44 @@ const log_houses = [
 
 <section id="log-houses" class="relative py-28 px-6">
     <div class="relative z-10 max-w-6xl mx-auto">
-
-    <!-- ── Header ───────────────────────────────────────────── -->
-    <div class="max-w-4xl mb-20">
-        <h2 class="section-title reveal delay-1 font-serif text-5xl md:text-6xl mb-6">
-            <p class="text-xs font-medium font-sans tracking-widest uppercase text-stone-400 mb-4">
-                Construidas por la naturaleza
+        <!-- ── Header ───────────────────────────────────────────── -->
+        <div class="max-w-4xl mb-20">
+            <h2 class="section-title reveal delay-1 font-serif text-5xl md:text-6xl mb-6">
+                <!-- FIX 1: <p> is not valid inside <h2>; changed to <span class="block"> -->
+                <span class="block text-xs font-medium font-sans tracking-widest uppercase text-stone-400 mb-4">
+                    Construidas por la naturaleza
+                </span>
+                Casas hechas de <span class="text-amber-800">troncos de madera</span>
+            </h2>
+            <p class="section-body reveal delay-3 text-base max-w-lg">
+                <span>✦</span>
+                Cada uno de nuestros modelos de casas de troncos está prediseñado para un montaje rápido sin sacrificar 
+                ni un centímetro de calidez o carácter.
             </p>
-            Casas hechas de <span class="text-amber-800">troncos de madera</span>
-        </h2>
-        <p class="section-body reveal delay-3 text-base max-w-lg">
-            <span>✦</span>
-            Cada uno de nuestros modelos de casas de troncos está prediseñado para un montaje rápido sin sacrificar 
-            ni un centímetro de calidez o carácter.
-        </p>
-    </div>
-
-    <!-- ── Cards grid ─────────────────────────────────────────── -->
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
-        {log_houses.map((h, i) => (
-            <article
-                class={`house-card reveal delay-${i + 2}`}
-                style={`animation-delay: ${0.2 + i * 0.15}s`}
-            >
-                <div class="card-accent"></div>
-                <!-- Image -->
-                <div class="relative h-52 overflow-hidden">
-                <Image
-                    src={h.image}
-                    alt={`${h.name} log house`}
-                    class="card-img w-full h-full object-cover"
-                    loading="lazy"
-                />
-                <!-- dark gradient -->
-                <div class="absolute inset-0" style="background: linear-gradient(180deg, rgba(20,16,10,0.12) 0%, rgba(20,16,10,0.45) 100%);"></div>
-
-                <!-- Body -->
-                <div class="relative p-6 pt-5">
-                <span class="card-number">{h.id}</span>
-
-                <h3 class="card-name mb-1">{h.name}</h3>
-
-                <!-- Divider -->
-                <div style="height:1px; background: linear-gradient(90deg, var(--bark) 0%, transparent 80%); opacity:0.2;" class="mb-5"></div>
-
-                <!-- Price + CTA -->
-                <div class="flex items-center justify-between">
-                    <div>
-                    <div class="section-eyebrow mb-0.5">Starting at</div>
-                    <div class="card-price">price</div>
+        </div>
+    
+        <!-- ── Cards grid ─────────────────────────────────────────── -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
+        {
+            log_houses.map((h, i) => (
+                <article
+                    class={`house-card reveal delay-${i + 2}`}
+                    style={`animation-delay: ${0.2 + i * 0.15}s`}
+                >
+                    <div class="card-accent"></div>
+                    <!-- Image -->
+                    <div class="relative h-52 overflow-hidden">
+                        <Image
+                            src={h.image}
+                            alt={h.name}
+                            class="card-img w-full h-full object-cover cursor-pointer transition-transform duration-800 hover:scale-110"
+                            loading="lazy"
+                        />
                     </div>
-                    <a href="#" class="btn-primary">
-                    <span>Details</span>
-                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
-                        <path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                    </a>
-                </div>
-            </article>
-        ))}
-    </div>
-
-    <!-- ── Bottom CTA bar ─────────────────────────────────────── -->
-    <div class="reveal delay-5 flex flex-col sm:flex-row items-center justify-between gap-6 p-8 border border-stone-200 bg-white/50 backdrop-blur-sm">
-        <div>
-        <p class="section-eyebrow mb-1">Can't find the right model?</p>
-        <p class="section-body text-sm">We offer fully custom log house configurations to match any plot or vision.</p>
+                </article>
+            ))
+        }
         </div>
-        <div class="flex gap-3 flex-shrink-0">
-        <a href="#" class="btn-ghost">View all models</a>
-        <a href="#" class="btn-primary">
-            <span>Custom quote</span>
-            <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
-            <path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-        </a>
-        </div>
-    </div>
-
     </div>
 </section>
 
