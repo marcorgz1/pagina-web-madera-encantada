@@ -1,5 +1,7 @@
 ---
 import { Image } from 'astro:assets';
+import { ArrowRight } from 'lucide-astro';
+import OnScrollReveal from 'astro-onscroll-animations';
 
 import log_house from '@/assets/log_houses/log_house.jpg'
 import log_house2 from '@/assets/log_houses/log_house2.jpg'
@@ -34,10 +36,10 @@ const log_houses = [
 ]
 ---
 
-<section id="log-houses" class="relative py-28 px-6">
-    <div class="relative z-10 max-w-6xl mx-auto">
+<section id="log-houses" class="py-28 px-6 scroll-animation scroll-animation-default">
+    <div class="max-w-6xl mx-auto">
         <!-- ── Header ───────────────────────────────────────────── -->
-        <div class="max-w-4xl mb-20">
+        <div class="max-w-7xl mb-20">
             <h2 class="section-title reveal delay-1 font-serif text-5xl md:text-6xl mb-6">
                 <!-- FIX 1: <p> is not valid inside <h2>; changed to <span class="block"> -->
                 <span class="block text-xs font-medium font-sans tracking-widest uppercase text-stone-400 mb-4">
@@ -45,7 +47,7 @@ const log_houses = [
                 </span>
                 Casas hechas de <span class="text-amber-800">troncos de madera</span>
             </h2>
-            <p class="section-body reveal delay-3 text-base max-w-lg">
+            <p class="text-gray-500 max-w-lg">
                 <span>✦</span>
                 Cada uno de nuestros modelos de casas de troncos está prediseñado para un montaje rápido sin sacrificar 
                 ni un centímetro de calidez o carácter.
@@ -74,7 +76,20 @@ const log_houses = [
             ))
         }
         </div>
+        <!-- ── Footer ───────────────────────────────────────────── -->
+        <div class="flex flex-col gap-12 mb-8">
+            <h3 class=" text-xl font-bold">Pendiente precio</h3>
+            <p class="text-amber-800/50">
+                ✦ Precios con IVA incluido · Entrega en toda España
+            </p>
+            <a href="#contact" class="flex items-center w-fit border border-gray-300 px-4 py-2 rounded-lg hover:bg-emerald-800 hover:text-white transition-colors">
+                Solicitar información
+                <ArrowRight className="ml-2 h-4 w-4" />
+            </a>
+        </div>
     </div>
+
+    <OnScrollReveal />
 </section>
 
 <!-- <main id="log-houses" class="py-24 px-4">

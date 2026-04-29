@@ -1,12 +1,16 @@
 ---
+import OnScrollReveal from 'astro-onscroll-animations';
+
 import processVideo from '../assets/video.mp4';
 ---
 
-<section id="about-us" class="mx-auto max-w-4xl text-center mb-48">
+<section id="about-us" class="mx-auto max-w-4xl text-center mb-48 scroll-animation scroll-animation-default ">
     <h1 class="text-6xl font-bold mb-16">
         Proceso de construcción
     </h1>
     <video class="mx-auto mb-24" width="640" height="480" muted controls loop>
         <source src={processVideo} type="video/mp4" />
     </video>
+
+    <OnScrollReveal />
 </section>

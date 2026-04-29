@@ -1,5 +1,6 @@
 ---
 import { ArrowRight } from 'lucide-astro'
+import OnScrollReveal from 'astro-onscroll-animations'
 
 import image from '@/assets/senators/image.jpeg'
 import image2 from '@/assets/senators/image2.jpeg'
@@ -49,21 +50,17 @@ const senators = [
 ]
 ---
 
-<section id="senators" class="py-24 px-4">
-    <div class="max-w-7xl mx-auto">
+<section id="senators" class="py-24 px-4 scroll-animation scroll-animation-default">
+    <div class="max-w-6xl mx-auto">
         <!-- Header -->
         <div
-            class="mb-14 flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4"
+            class="mb-14 flex flex-col gap-4"
         >
-            <div>
-                <div class="inline-flex items-center gap-4 px-3 py-1 rounded-full bg-gray-100 text-xs uppercase mb-6">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-home-2"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M5 12l-2 0l9 -9l9 9l-2 0" /><path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" /><path d="M10 12h4v4h-4l0 -4" /></svg>
-                    Colección
-                </div>
+            <div class="mb-2">
                 <span
                     class="text-xs uppercase tracking-[0.2em] text-stone-400 font-semibold mb-3 block"
                 >
-                    Galería
+                    Colección
                 </span>
                 <h2
                     class="text-5xl sm:text-6xl font-serif text-amber-800 leading-none tracking-tight"
@@ -72,8 +69,9 @@ const senators = [
                 </h2>
             </div>
             <p
-                class="text-stone-500 max-w-xs text-sm leading-relaxed sm:text-right"
+                class="text-stone-500 max-w-xs text-sm leading-relaxed"
             >
+                <span>✦</span>
                 Espacios únicos para disfrutar del exterior con estilo y confort
                 todo el año.
             </p>
@@ -97,11 +95,13 @@ const senators = [
         <div class="flex justify-center items-center mx-auto">
             <a 
                 href="#contact" 
-                class="flex justify-center items-center font-semibold border border-gray-300 px-4 py-2 rounded-lg hover:bg-emerald-800 hover:text-white transition-colors"
+                class="flex justify-center items-center border border-gray-300 px-4 py-2 rounded-lg hover:bg-emerald-800 hover:text-white transition-colors"
             >
                 Solicitar información 
                 <ArrowRight className="ml-2 h-4 w-4" />
             </a>
         </div>
     </div>
+
+    <OnScrollReveal />
 </section>

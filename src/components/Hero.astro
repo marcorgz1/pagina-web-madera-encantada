@@ -1,10 +1,25 @@
 ---
 import { ArrowRight } from 'lucide-astro'
-import heroImage from '@/assets/houses/house.jpg';
+import OnScrollReveal from 'astro-onscroll-animations';
+
+// Images imports
+import house from '@/assets/houses/house.jpg';
+import house2 from '@/assets/houses/house2.jpg';
+import house3 from '@/assets/houses/house3.jpeg';
+import house4 from '@/assets/houses/house4.jpg';
+
+import ImagesSlider from './ImagesSlider.astro';
+
+const houses = [
+    house,
+    house2,
+    house3,
+    house4    
+];
 ---
 
-<section class="relative h-[85vh] flex items-center justify-center overflow-hidden mb-32">
-    <img src={heroImage.src} alt="hero house image" class="absolute overflow-y-clip w-full h-full object-cover" />
+<section class="relative h-[85vh] flex items-center justify-center overflow-hidden mb-32 scroll-animation scroll-animation-default delay-300">
+    <ImagesSlider houses={houses} interval={3000} />
     <div class="absolute inset-0 bg-black/70"></div>
     <div class="relative flex flex-col justify-center items-center gap-14 px-10 text-white z-10"> 
         <p class="uppercase tracking-[0.3em] text-xs md:text-sm text-green-300">
@@ -32,4 +47,6 @@ import heroImage from '@/assets/houses/house.jpg';
             </a>
         </div>
     </div>
+
+    <OnScrollReveal />
 </section>
