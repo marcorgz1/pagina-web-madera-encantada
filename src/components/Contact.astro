@@ -2,7 +2,7 @@
 import { Phone, Mail, MapPin } from "lucide-astro";
 ---
 
-<section id="contact" class="scroll-mt-32">
+<section id="contact" class="scroll-mt-48">
     <div class="flex justify-between items-start w-full px-48 mb-24">
         <div class="flex flex-col gap-16">
             <div class="flex flex-col justify-center items-center gap-6 mb-4">
@@ -66,14 +66,14 @@ import { Phone, Mail, MapPin } from "lucide-astro";
                 <div class="flex flex-col gap-4">
                     <label class="flex items-center gap-2" for="name">Nombre completo<span class="text-red-400">*</span></label>
                     <input class="w-full border border-gray-300 outline-none px-4 py-2
-                        focus:border-transparent focus:ring-2 focus:ring-emerald-500 rounded-lg transition-colors"
+                        focus:border-transparent focus:ring-2 focus:ring-emerald-500 bg-emerald-50/60 rounded-lg transition-colors"
                         placeholder="Tu nombre"
                         required 
                     />
                 </div>
                 <div class="flex flex-col gap-4">
                     <label class="flex items-center gap-2" for="name">Teléfono</label>
-                    <input class="w-full border border-gray-300 outline-none px-4 py-2
+                    <input class="w-full bg-emerald-50/60 border border-gray-300 outline-none px-4 py-2
                         focus:border-transparent focus:ring-2 focus:ring-emerald-500 rounded-lg transition-colors"
                         placeholder="Tu número de teléfono"
                         required 
@@ -82,7 +82,7 @@ import { Phone, Mail, MapPin } from "lucide-astro";
             </div>
             <div class="flex flex-col gap-4">
                 <label for="email">Correo <span class="text-red-400">*</span></label>
-                <input class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-transparent outline-none transition-colors"
+                <input class="w-full px-4 py-2 bg-emerald-50/60 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-transparent outline-none transition-colors"
                 placeholder="Tu correo electrónico"
                 required
                 />
@@ -91,7 +91,7 @@ import { Phone, Mail, MapPin } from "lucide-astro";
                 <label for="message">Mensaje <span class="text-red-400">*</span></label>
                 <textarea
                     rows="6"
-                    class="w-full px-4 py-2 border border-gray-300 outline-none 
+                    class="w-full px-4 py-2 bg-emerald-50/60 border border-gray-300 outline-none 
                         focus:border-transparent focus:ring-2 focus:ring-emerald-500 rounded-lg mb-2 transition-colors"
                     placeholder="Cuéntanos lo que necesites saber"
                 />

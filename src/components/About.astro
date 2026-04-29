@@ -1,10 +1,68 @@
-<section id="about-us" class="mx-auto max-w-4xl mb-48 scroll-mt-32">
-    <h1 class="text-6xl font-bold mb-12 text-center">
-        Sobre nosotros
-    </h1>
-    <h3>
-        Somos una empresa fundada con el objetivo de transformar el concepto tradicional de vivienda, nuestra empresa nace en España como respuesta a la creciente demanda de soluciones habitacionales más eficientes, sostenibles y accesibles. Inspirados por la evolución de la construcción industrializada, apostamos por el desarrollo de casas prefabricadas que combinan diseño contemporáneo, innovación tecnológica y altos estándares de calidad.
-        Desde nuestros inicios, hemos trabajado bajo un modelo de fabricación en entornos controlados, lo que permite optimizar tiempos, reducir costes y garantizar una ejecución precisa en cada proyecto. Este enfoque, cada vez más consolidado en el sector, ofrece viviendas personalizables, energéticamente eficientes y adaptadas a las necesidades actuales de nuestros clientes.
-        A lo largo de los años, hemos evolucionado junto al mercado, incorporando nuevas técnicas constructivas y materiales sostenibles, posicionándonos como una alternativa sólida frente a la construcción tradicional. Hoy, seguimos comprometidos con la innovación y el diseño, acompañando a cada cliente en el proceso de crear un hogar único, funcional y preparado para el futuro.
-    </h3>
+---
+import ConstructionProcess from "./ConstructionProcess.astro";
+import { CheckCircle, Award, Users, Zap } from 'lucide-astro';
+
+const features = [
+    {
+        icon: Award,
+        title: 'Construcción de calidad',
+        description: 'Cada casa está construida con los mejores materiales y una mano de obra excepcional',
+    },
+    {
+        icon: Zap,
+        title: 'Entrega rápida',
+        description: 'Nada de esperas ni de retrasos. Tu casa estará lista para usar cuando tú lo desees'
+    },
+    {
+        icon: Users,
+        title: 'Equipo con experiencia Expert Team',
+        description: 'Disponemos de un equipo de profesionales que se asegurarán de convertir tu sueño en realidad',
+    },
+    {
+        icon: CheckCircle,
+        title: 'Calidad y comodidad garantizadas',
+        description: 'Cada una de nuestras casas ha pasado por una revisión restricta y detallada para asegurar la mayor calidad y comodidad posibles',
+    }
+];
+---
+
+<section>
+    <div id="about-us" class="mx-auto max-w-4xl mb-48 scroll-mt-32">
+        <h1 class="text-6xl font-bold mb-16 text-center">
+            Sobre nosotros
+        </h1>
+        <h3>
+            Somos una empresa fundada con el objetivo de transformar el concepto tradicional de vivienda, nuestra empresa nace en España como respuesta a la creciente demanda de soluciones habitacionales más eficientes, sostenibles y accesibles. Inspirados por la evolución de la construcción industrializada, apostamos por el desarrollo de casas prefabricadas que combinan diseño contemporáneo, innovación tecnológica y altos estándares de calidad.
+            Desde nuestros inicios, hemos trabajado bajo un modelo de fabricación en entornos controlados, lo que permite optimizar tiempos, reducir costes y garantizar una ejecución precisa en cada proyecto. Este enfoque, cada vez más consolidado en el sector, ofrece viviendas personalizables, energéticamente eficientes y adaptadas a las necesidades actuales de nuestros clientes.
+            A lo largo de los años, hemos evolucionado junto al mercado, incorporando nuevas técnicas constructivas y materiales sostenibles, posicionándonos como una alternativa sólida frente a la construcción tradicional. Hoy, seguimos comprometidos con la innovación y el diseño, acompañando a cada cliente en el proceso de crear un hogar único, funcional y preparado para el futuro.
+        </h3>
+    </div>
+    <ConstructionProcess />
+    <div id="why-choose-us" class="mx-auto max-w-6xl mb-48 scroll-mt-32">
+        <h1 class="text-6xl font-bold mb-16 text-center">
+            ¿Por qué elegir Madera Encantada?
+        </h1>
+        <p class="text-center mb-24">
+            Somos una empresa fundada con el objetivo de transformar el concepto tradicional de vivienda, nuestra empresa nace en España como respuesta a la creciente demanda de soluciones habitacionales más eficientes, sostenibles y accesibles. Inspirados por la evolución de la construcción industrializada, apostamos por el desarrollo de casas prefabricadas que combinan diseño contemporáneo, innovación tecnológica y altos estándares de calidad.
+            Desde nuestros inicios, hemos trabajado bajo un modelo de fabricación en entornos controlados, lo que permite optimizar tiempos, reducir costes y garantizar una ejecución precisa en cada proyecto. Este enfoque, cada vez más consolidado en el sector, ofrece viviendas personalizables, energéticamente eficientes y adaptadas a las necesidades actuales de nuestros clientes.
+            A lo largo de los años, hemos evolucionado junto al mercado, incorporando nuevas técnicas constructivas y materiales sostenibles, posicionándonos como una alternativa sólida frente a la construcción tradicional. Hoy, seguimos comprometidos con la innovación y el diseño, acompañando a cada cliente en el proceso de crear un hogar único, funcional y preparado para el futuro.
+        </p>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+        {
+            features.map((feature) => (
+                <div class="text-center p-10 rounded-xl bg-linear-to-br from-emerald-50 to-teal-50 hover:shadow-lg transition-shadow">
+                    <div class="inline-flex items-center justify-center w-16 h-16 bg-emerald-100 rounded-full mb-6">
+                        <feature.icon class="h-8 w-8 text-emerald-600" />
+                    </div>
+                    <h4 class="text-xl font-bold text-gray-900 mb-4">
+                        {feature.title}
+                    </h4>
+                    <p class="text-gray-400 leading-relaxed">
+                        {feature.description}
+                    </p>
+                </div>
+            ))
+        }    
+        </div>
+    </div>
 </section>
