@@ -12,10 +12,13 @@
     "astro": "astro"
   },
   "dependencies": {
+    "@lucide/astro": "^1.14.0",
     "@tailwindcss/vite": "^4.2.2",
+    "@types/nodemailer": "^8.0.0",
     "astro": "^6.1.9",
     "astro-onscroll-animations": "^1.0.2",
     "lucide-astro": "^0.556.0",
+    "nodemailer": "^8.0.7",
     "tailwindcss": "^4.2.2"
   }
 }

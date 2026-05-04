@@ -1,5 +1,5 @@
 ---
-import { Phone, Mail, MapPin } from "lucide-astro";
+import { Mail, MapPin, Phone } from "@lucide/astro";
 import OnScrollReveal from 'astro-onscroll-animations';
 ---
 
@@ -7,7 +7,7 @@ import OnScrollReveal from 'astro-onscroll-animations';
     <div class="flex justify-between items-start w-full px-48 mb-24">
         <div class="flex flex-col gap-16">
             <div class="flex flex-col justify-center items-center gap-6">
-                <h1 class="text-6xl font-bold text-center">
+                <h1 class="text-6xl text-gray-800/80 font-serif font-semibold text-center">
                     Vamos a planificar tu nueva casa
                 <br />
                 </h1>
@@ -22,11 +22,11 @@ import OnScrollReveal from 'astro-onscroll-animations';
                         <div class="flex flex-col">
                             <p class="text-gray-400">Email</p>
                             <a
-                                href="mailto:info@maderaencantada.com"
-                                class="hover:text-emerald-500 transition-colors"
+                                href="mailto:contact@madera-encantada.es"
+                                class="hover:text-emerald-600 transition-colors"
                                 >contact@madera-encantada.es</a
                             >
-                        </div>                        
+                        </div>
                     </li>
                     <li class="flex items-center gap-8">
                         <Phone class="w-6 h-6 text-emerald-700" />
@@ -35,14 +35,14 @@ import OnScrollReveal from 'astro-onscroll-animations';
                             <div class="flex gap-6">
                                 <a
                                     href="tel:+34652447192"
-                                    class="hover:text-emerald-500 transition-colors"
+                                    class="hover:text-emerald-600 transition-colors"
                                 >
                                     +34 652 447 192
                                 </a>
                                 <span>/</span>
                                 <a
                                     href="tel:+34613336085"
-                                    class="hover:text-emerald-500 transition-colors"
+                                    class="hover:text-emerald-600 transition-colors"
                                 >
                                     +34 613 336 085
                                 </a>
@@ -68,6 +68,7 @@ import OnScrollReveal from 'astro-onscroll-animations';
                 </ul>
             </div>
         </div>
+        <!-- ── Contact form ───────────────────────────────────────────── -->
         <form class="flex flex-col gap-8 bg-white px-16 py-12 rounded-lg mb-20">
             <div class="flex justify-between gap-12">
                 <div class="flex flex-col gap-4">
