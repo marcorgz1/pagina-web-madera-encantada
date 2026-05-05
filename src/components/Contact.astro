@@ -1,6 +1,6 @@
 ---
-import { Mail, MapPin, Phone } from "@lucide/astro";
-import OnScrollReveal from 'astro-onscroll-animations';
+import { Mail, MapPin, Phone } from '@lucide/astro'
+import OnScrollReveal from 'astro-onscroll-animations'
 ---
 
 <section id="contact" class="scroll-mt-48 scroll-animation scroll-animation-default">
@@ -9,7 +9,7 @@ import OnScrollReveal from 'astro-onscroll-animations';
             <div class="flex flex-col justify-center items-center gap-6">
                 <h1 class="text-6xl text-gray-800/80 font-serif font-semibold text-center">
                     Vamos a planificar tu nueva casa
-                <br />
+                    <br />
                 </h1>
                 <span class="text-xl text-amber-800/40">
                     ¿Tienes alguna duda? Nuestro equipo estará encantado de ayudarte a escoger tu casa perfecta.
@@ -23,8 +23,7 @@ import OnScrollReveal from 'astro-onscroll-animations';
                             <p class="text-gray-400">Email</p>
                             <a
                                 href="mailto:contact@madera-encantada.es"
-                                class="hover:text-emerald-600 transition-colors"
-                                >contact@madera-encantada.es</a
+                                class="hover:text-emerald-600 transition-colors">contact@madera-encantada.es</a
                             >
                         </div>
                     </li>
@@ -33,17 +32,11 @@ import OnScrollReveal from 'astro-onscroll-animations';
                         <div class="flex flex-col gap-2 w-full">
                             <p class="text-gray-400">Teléfono</p>
                             <div class="flex gap-6">
-                                <a
-                                    href="tel:+34652447192"
-                                    class="hover:text-emerald-600 transition-colors"
-                                >
+                                <a href="tel:+34652447192" class="hover:text-emerald-600 transition-colors">
                                     +34 652 447 192
                                 </a>
                                 <span>/</span>
-                                <a
-                                    href="tel:+34613336085"
-                                    class="hover:text-emerald-600 transition-colors"
-                                >
+                                <a href="tel:+34613336085" class="hover:text-emerald-600 transition-colors">
                                     +34 613 336 085
                                 </a>
                             </div>
@@ -55,56 +48,76 @@ import OnScrollReveal from 'astro-onscroll-animations';
                             <div class="flex flex-col gap-2">
                                 <p class="text-gray-400">Dirección</p>
                                 <p class="flex flex-col gap-12">
-                                    Tudela -Navarra 
-                                    <br /> 
-                                    Polígono Las Labradas 1 
+                                    Tudela -Navarra
+                                    <br />
+                                    Polígono Las Labradas 1
                                     <br />
                                     Calle Estella nave C1
                                 </p>
                             </div>
                         </div>
                     </li>
-
                 </ul>
             </div>
         </div>
         <!-- ── Contact form ───────────────────────────────────────────── -->
-        <form class="flex flex-col gap-8 bg-white px-16 py-12 rounded-lg mb-20">
+        <form 
+            id="contact-form" 
+            class="flex flex-col gap-8 bg-white px-16 py-12 rounded-lg mb-20">
             <div class="flex justify-between gap-12">
                 <div class="flex flex-col gap-4">
-                    <label class="flex items-center gap-2" for="name">Nombre completo<span class="text-red-400">*</span></label>
-                    <input class="w-full border border-gray-300 outline-none px-4 py-2
+                    <label class="flex items-center gap-2" for="name"
+                        >Nombre completo<span class="text-red-400">*</span></label
+                    >
+                    <input
+                        id="full-name"
+                        name="full-name"
+                        class="w-full border border-gray-300 outline-none px-4 py-2
                         focus:border-transparent focus:ring-2 focus:ring-emerald-500 bg-emerald-50/60 rounded-lg transition-colors"
                         placeholder="Tu nombre"
-                        required 
+                        required
                     />
                 </div>
                 <div class="flex flex-col gap-4">
                     <label class="flex items-center gap-2" for="name">Teléfono</label>
-                    <input class="w-full bg-emerald-50/60 border border-gray-300 outline-none px-4 py-2
+                    <input
+                        id="phone-number"
+                        name="phone-number"
+                        type="number"
+                        class="w-full bg-emerald-50/60 border border-gray-300 outline-none px-4 py-2
                         focus:border-transparent focus:ring-2 focus:ring-emerald-500 rounded-lg transition-colors"
                         placeholder="Tu número de teléfono"
-                        required 
+                        required
                     />
                 </div>
             </div>
             <div class="flex flex-col gap-4">
                 <label for="email">Correo <span class="text-red-400">*</span></label>
-                <input class="w-full px-4 py-2 bg-emerald-50/60 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-transparent outline-none transition-colors"
-                placeholder="Tu correo electrónico"
-                required
+                <input
+                    type="email"
+                    name="email"
+                    class="w-full px-4 py-2 bg-emerald-50/60 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-transparent outline-none transition-colors"
+                    placeholder="Tu correo electrónico"
+                    required
                 />
             </div>
             <div class="flex flex-col gap-4">
                 <label for="message">Mensaje <span class="text-red-400">*</span></label>
                 <textarea
+                    id="message"
+                    name="message"
                     rows="6"
-                    class="w-full px-4 py-2 bg-emerald-50/60 border border-gray-300 outline-none 
+                    class="w-full px-4 py-2 bg-emerald-50/60 border border-gray-300 outline-none
                         focus:border-transparent focus:ring-2 focus:ring-emerald-500 rounded-lg mb-2 transition-colors"
-                    placeholder="Cuéntanos lo que necesites saber"
-                />
+                    placeholder="Cuéntanos lo que necesites saber"></textarea>
             </div>
-            <button class="text-white font-semibold bg-emerald-600 px-4 py-2 rounded-md mx-auto cursor-pointer w-fit hover:bg-emerald-700 transition-colors">
+            <!-- Status message -->
+            <p id="form-status" class="text-center text-sm hidden"></p>
+            <button
+                type="submit"
+                id="submit-btn"
+                class="text-white font-semibold bg-emerald-600 px-4 py-2 rounded-md mx-auto cursor-pointer w-fit hover:bg-emerald-700 transition-colors"
+            >
                 Enviar
             </button>
         </form>
@@ -112,3 +125,42 @@ import OnScrollReveal from 'astro-onscroll-animations';
 
     <OnScrollReveal />
 </section>
+
+<script>
+    const form = document.getElementById('contact-form') as HTMLFormElement
+    const submitBtn = document.getElementById('submit-btn') as HTMLButtonElement
+    const statusMsg = document.getElementById('form-status') as HTMLParagraphElement
+
+    form.addEventListener('submit', async e => {
+        e.preventDefault()
+
+        // Loading state
+        submitBtn.disabled = true
+        submitBtn.textContent = 'Enviando...'
+        statusMsg.className = 'text-center text-sm hidden'
+
+        try {
+            const response = await fetch('/api/contact', {
+                method: 'POST',
+                body: new FormData(form),
+            })
+
+            const result = await response.json()
+
+            if (result.success) {
+                statusMsg.textContent = '✅ Mensaje enviado correctamente. ¡Gracias!'
+                statusMsg.className = 'text-center text-sm text-emerald-600'
+                form.reset()
+            } else {
+                statusMsg.textContent = `❌ ${result.error ?? 'Error al enviar el mensaje.'}`
+                statusMsg.className = 'text-center text-sm text-red-500'
+            }
+        } catch {
+            statusMsg.textContent = '❌ Error de red. Inténtalo de nuevo.'
+            statusMsg.className = 'text-center text-sm text-red-500'
+        } finally {
+            submitBtn.disabled = false
+            submitBtn.textContent = 'Enviar'
+        }
+    })
+</script>
