@@ -1,5 +1,5 @@
 ---
-import { ArrowRight } from 'lucide-astro'
+import { ArrowRight, ArrowDown } from 'lucide-astro'
 import OnScrollReveal from 'astro-onscroll-animations'
 
 import image from '@/assets/senators/image.jpeg'
@@ -15,37 +15,37 @@ const senators = [
         id: '1',
         name: 'Primer senador',
         image: image,
-        price: '9.800€',
+        price: '9.800 €',
     },
     {
         id: '2',
         name: 'Segundo senador',
         image: image2,
-        price: '6.500€',
+        price: '6.500 €',
     },
     {
         id: '3',
         name: 'Tercer senador',
         image: image3,
-        price: '7.800€',
+        price: '7.800 €',
     },
     {
         id: '4',
         name: 'Cuarto senador',
         image: image4,
-        price: '6.900€',
+        price: '6.900 €',
     },
     {
         id: '5',
         name: 'Quinto senador',
         image: image5,
-        price: '5.200€',
+        price: '5.200 €',
     },
     {
         id: '6',
         name: 'Sexto senador',
         image: image6,
-        price: '7.900€',
+        price: '7.900 €',
     },
 ]
 ---
@@ -80,10 +80,10 @@ const senators = [
                     <div class="flex justify-center">
                         <button
                             id="view-all-btn"
-                            class="flex items-center text-sm text-emerald-800 font-medium transition-all cursor-pointer hover:scale-105"
+                            class="flex items-center text-sm text-emerald-800 font-medium transition-all cursor-pointer"
                         >
-                            <span id="view-all-label">View All</span>                            
-                            <ArrowRight id="view-all-icon" className="ml-2 h-4 w-4" />
+                            <span id="view-all-label">Ver todo</span>                            
+                            <ArrowDown id="view-all-icon" className="ml-2 h-4 w-4" />
                         </button>
                     </div>
                 )}
@@ -133,7 +133,7 @@ const senators = [
 
         if (expanded) {
                 allCards.forEach(card => card.classList.remove('hidden'));
-                if (label) label.textContent = 'Show Less';
+                if (label) label.textContent = 'Mostrar menos';
                 if (icon) icon.style.transform = 'rotate(-90deg)';
             } else {
                 allCards.forEach((card, i) => {
