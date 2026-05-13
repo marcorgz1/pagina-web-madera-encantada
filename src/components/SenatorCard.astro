@@ -22,36 +22,15 @@ const { name, image, price } = Astro.props
     </div>
 
     <!-- Content -->
-    <div class="flex flex-col gap-4 p-6">
-        <div class="flex items-end justify-between">
-            <div class="flex flex-col gap-2">
-                <span
-                    class="text-xs uppercase tracking-widest text-stone-400 font-medium"
-                    >Desde</span
-                >
-                <span class="text-2xl font-bold text-emerald-700 leading-none"
-                    >{price}</span
-                >
-            </div>
-
-            <a
-                href="#"
-                class="inline-flex items-center gap-2 px-5 py-2.5 bg-emerald-600 text-white text-sm font-medium rounded-xl hover:bg-emerald-700 transition-colors duration-300 group/btn"
+    <div class="justify-between items-center px-8 py-4">
+        <div class="flex justify-between items-center px-4 py-2">
+            <span
+                class="text-xs uppercase tracking-widest text-stone-400 font-medium"
+                >Desde</span
             >
-                Ver más
-                <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    class="w-4 h-4 translate-x-0 group-hover/btn:translate-x-1 transition-transform duration-200"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                >
-                    <path d="M5 12h14M12 5l7 7-7 7"></path>
-                </svg>
-            </a>
+            <span class="text-4xl font-bold text-emerald-700 leading-none"
+                >{price}</span
+            >
         </div>
     </div>
 </article>

@@ -83,7 +83,7 @@ const senators = [
                             class="flex items-center text-sm text-emerald-800 font-medium transition-all cursor-pointer"
                         >
                             <span id="view-all-label">Ver todo</span>                            
-                            <ArrowDown id="view-all-icon" className="ml-2 h-4 w-4" />
+                            <ArrowRight id="view-all-icon" className="ml-2 h-4 w-4" />
                         </button>
                     </div>
                 )}
@@ -139,7 +139,7 @@ const senators = [
                 allCards.forEach((card, i) => {
                     if (i >= 3) card.classList.add('hidden');
                 });
-                if (label) label.textContent = 'View All';
+                if (label) label.textContent = 'Ver Todo';
                 if (icon) icon.style.transform = 'rotate(0deg)';
             }
         });
