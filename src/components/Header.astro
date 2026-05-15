@@ -5,10 +5,12 @@ import brandLogo from '@/assets/logo.png';
 <header class="fixed top-0 w-full z-50 bg-green-50 border-b border-border/50 py-4 scroll-animation">
   <div class="flex justify-between items-center px-32">
     <div class="flex items-center gap-2">
-      <img src={brandLogo.src} alt="website brand logo" class="w-20 h-18 duration-600 hover:scale-90 transition" />
+      <a href="/">      
+        <img src={brandLogo.src} alt="website brand logo" class="w-20 h-18 duration-600 hover:scale-90 transition" />
+      </a>
       <div class="flex flex-col gap-2 leading-tight">
-        <span class="text-lg text-emerald-800 tracking-tight">Madera Encantada</span>
-        <span class="text-xs uppercase tracking-widest text-green-600">Casas prefabricadas</span>
+        <span class="text-[10px] uppercase tracking-widest text-green-600">Casas prefabricadas</span>
+        <span class="text-2xl text-emerald-800 tracking-tight">Madera Encantada</span>
       </div>
     </div>
     <nav class="flex items-center gap-12 text-md">
