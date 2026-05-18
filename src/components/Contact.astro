@@ -37,8 +37,8 @@ if (Astro.request.method === 'POST') {
     id="contact"
     class="scroll-mt-48 scroll-animation scroll-animation-default"
 >
-    <div class="flex justify-center items-center w-full mb-48">
-        <div class="flex flex-col justify-center items-center gap-12">
+    <div class="flex justify-center items-center mb-48">
+        <div class="flex flex-col max-w-6xl gap-12">
             <div class="flex flex-col gap-6 mb-16">
                 <h3
                     class="text-emerald-700 text-sm font-semibold tracking-[0.2em] uppercase"
@@ -46,7 +46,7 @@ if (Astro.request.method === 'POST') {
                     Contáctanos
                 </h3>
                 <h1
-                    class="text-6xl text-gray-800/80 font-serif font-semibold text-center"
+                    class="text-6xl text-gray-800/80 font-serif font-semibold"
                 >
                     Vamos a planificar tu nueva casa
                     <br />
@@ -93,7 +93,7 @@ if (Astro.request.method === 'POST') {
                             </div>
                         </div>
                     </li>
-                    <!-- <li class="flex items-center px-8 py-6 border border-gray-200 shadow-sm w-sm rounded-2xl gap-8 hover:shadow-md">
+                    <li class="flex items-center px-8 py-6 border border-gray-200 shadow-sm w-sm rounded-2xl gap-8 hover:shadow-md">
                         <div class="w-12 h-12 bg-emerald-50 rounded-lg flex items-center justify-center flex-shrink-0">
                             <MapPin class="w-6 h-6 text-emerald-800" />
                         </div>
@@ -107,31 +107,8 @@ if (Astro.request.method === 'POST') {
                                 Calle Estella nave C1
                             </p>
                         </div>
-                    </li> -->
+                    </li>
                 </ul>
-            </div>
-            <div class="flex justify-center items-center gap-32">
-                {/* Map placeholder */}
-                <Map
-                    src="https://www.openstreetmap.org/export/embed.html?bbox=-1.62,42.05,-1.59,42.07&layer=mapnik&marker=42.060,-1.605"
-                    title="Polígono Las Labradas, Tudela"
-                    class="flex-1 min-w-64 min-h-36"
-                />
-                <div class="flex flex-col justify-center gap-8 w-sm px-8 py-6 border border-gray-200 shadow-sm rounded-2xl hover:shadow-md">
-                    <div class="w-12 h-12 bg-emerald-50 rounded-lg flex items-center justify-center flex-shrink-0">
-                        <MapPin class="w-6 h-6 text-emerald-800" />
-                    </div>
-                    <div class="flex flex-col gap-2">
-                        <p class="text-gray-400 uppercase">Dirección</p>
-                        <p class="flex flex-col gap-12">
-                            Tudela -Navarra
-                            <br />
-                            Polígono Las Labradas 1
-                            <br />
-                            Calle Estella nave C1
-                        </p>
-                    </div>
-                </div>
             </div>
         </div>
     </div>
