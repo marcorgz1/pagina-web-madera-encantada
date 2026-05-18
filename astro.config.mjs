@@ -1,5 +1,4 @@
 // @ts-check
-import node from '@astrojs/node';
 import tailwindcss from '@tailwindcss/vite';
 import { defineConfig } from 'astro/config';
 
