@@ -1,42 +1,9 @@
 ---
-import { sendEmail } from '@/utils/email.ts'
-import { Mail, MapPin, Phone } from '@lucide/astro'
-import OnScrollReveal from 'astro-onscroll-animations'
-import Map from './Map.astro'
-
-let success = false
-let errorMessage = ''
-
-if (Astro.request.method === 'POST') {
-    try {
-        const data = await Astro.request.formData()
-        const name = data.get('full-name')
-        const email = data.get('email')
-        const phone = data.get('phone-number')
-        const message = data.get('message')
-
-        if (!name || !email || !message) {
-            throw new Error('No se han rellenado los campos obligatorios')
-        }
-
-        await sendEmail({
-            name,
-            email,
-            phone,
-            html: String(message),
-        })
-
-        success = true
-    } catch (err) {
-        errorMessage = err instanceof Error ? err.message : 'Error desconocido'
-    }
-}
+import { Mail, MapPin, Phone } from '@lucide/astro';
+import OnScrollReveal from 'astro-onscroll-animations';
 ---
 
-<section
-    id="contact"
-    class="scroll-mt-48 scroll-animation scroll-animation-default"
->
+<section id="contact" class="scroll-mt-48 scroll-animation scroll-animation-default">
     <div class="flex justify-center items-center mb-48">
         <div class="flex flex-col max-w-6xl gap-12">
             <div class="flex flex-col gap-6 mb-16">
