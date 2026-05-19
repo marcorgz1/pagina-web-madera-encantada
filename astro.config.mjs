@@ -11,8 +11,5 @@ export default defineConfig({
             tailwindcss()
         ]
     },
-    output: 'server',
-    adapter: vercel({
-        imageService: true,
-    }),
+    output: 'server'
 });
