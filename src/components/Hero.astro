@@ -18,31 +18,30 @@ const houses = [
 ];
 ---
 
-<section class="relative h-[85vh] flex items-center justify-center overflow-hidden mb-32 scroll-animation scroll-animation-default delay-300">
+<section class="relative w-full h-[85vh] flex items-center justify-center overflow-hidden pt-16 mb-16 md:mb-32 scroll-animation scroll-animation-default delay-300">
     <ImagesSlider houses={houses} interval={3000} />
     <div class="absolute inset-0 bg-black/70"></div>
-    <div class="relative flex flex-col justify-center items-center gap-14 px-10 text-white z-10"> 
+    <div class="relative flex flex-col justify-center items-center gap-6 sm:gap-10 lg:gap-14 px-4 sm:px-8 lg:px-10 text-white z-10 text-center">
         <p class="uppercase tracking-[0.3em] text-xs md:text-sm text-green-300">
             Casas prefabricadas. Atractivas y modernas
         </p>
-        <h1 class="text-6xl font-bold text-center">
+        <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-center">
             La casa de tus sueños,
             <br />
             preparada para ser construida
         </h1>
-        <h3 class="text-xl text-wrap">
+        <h3 class="text-base sm:text-lg lg:text-xl text-balance">
             Descubre nuestras atractivas y modernas casas prefabricadas preparadas para vivir
-            <br />
             cómodamente. Con un diseño elegante y una gran calidad de construcción
         </h3>
-        <div class="flex justify-center items-center gap-16">
-            <a href="#prefab-houses" class="bg-green-700 text-white font-bold decoration-0 hover:bg-green-800 rounded-lg 
-                        flex justify-center items-center gap-4 px-6 py-2 cursor-pointer transition-colors">
+        <div class="flex flex-col sm:flex-row justify-center items-center gap-4 sm:gap-8 lg:gap-16 w-full sm:w-auto">
+            <a href="#prefab-houses" class="bg-green-700 text-white font-bold decoration-0 hover:bg-green-800 rounded-lg
+                        flex justify-center items-center gap-4 px-6 py-2 cursor-pointer transition-colors w-full sm:w-auto">
                 Nuestras casas
                 <ArrowRight size={20} />
             </a>
-            <a href="#contact" class="text-white border border-gray-50 decoration-0 hover:bg-white/10 rounded 
-                        flex justify-center items-center gap-4 px-6 py-2 cursor-pointer transition-colors">
+            <a href="#contact" class="text-white border border-gray-50 decoration-0 hover:bg-white/10 rounded
+                        flex justify-center items-center gap-4 px-6 py-2 cursor-pointer transition-colors w-full sm:w-auto">
                 Conócenos más
             </a>
         </div>

@@ -26,6 +26,7 @@ const { houses, interval } = Astro.props;
     ))}
 </div>
 
+<!-- Script para cambiar las imágenes -->
 <script define:vars={{ interval }}>
     const container = document.getElementById("slideshow-container");
     const slides = container.querySelectorAll("[data-slide]");

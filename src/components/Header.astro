@@ -2,21 +2,66 @@
 import brandLogo from '@/assets/logo.png';
 ---
 
-<header class="fixed top-0 w-full z-50 bg-green-50 border-b border-border/50 py-4 scroll-animation">
-  <div class="flex justify-between items-center px-32">
+<header class="md:fixed w-full z-50 bg-green-50 border-b border-border/50 py-3 sm:py-4 scroll-animation">
+  <div class="flex justify-between items-center px-4 sm:px-8 md:px-12 lg:px-20 xl:px-32">
     <div class="flex items-center gap-2">
-      <a href="/">      
-        <img src={brandLogo.src} alt="website brand logo" class="w-20 h-18 duration-600 hover:scale-90 transition" />
+      <a href="/">
+        <img src={brandLogo.src} alt="website brand logo" class="w-14 h-14 sm:w-16 sm:h-16 lg:w-20 lg:h-18 duration-600 hover:scale-90 transition" />
       </a>
-      <div class="flex flex-col gap-2 leading-tight">
-        <span class="text-[10px] uppercase tracking-widest text-green-600">Casas prefabricadas</span>
-        <span class="text-2xl text-emerald-800 tracking-tight">Madera Encantada</span>
+      <div class="flex flex-col gap-1 sm:gap-2 leading-tight">
+        <span class="text-[8px] sm:text-[10px] uppercase tracking-widest text-green-600">Casas prefabricadas</span>
+        <span class="text-lg sm:text-xl lg:text-2xl text-emerald-800 tracking-tight">Madera Encantada</span>
       </div>
     </div>
-    <nav class="flex items-center gap-12 text-md">
+
+    <!-- Navbar  -->
+    <nav class="hidden lg:flex items-center gap-6 md:gap-12 text-sm md:text-md">
       <a href="#about-us" class="hover:text-emerald-800 transition-colors">Sobre nosotros</a>
       <a href="#projects" class="hover:text-emerald-800 transition-colors">Nuestros proyectos</a>
       <a href="#contact" class="text-white font-sans px-4 py-2 font-semibold rounded-lg bg-emerald-700 hover:bg-emerald-800 transition-colors">Contacto</a>
     </nav>
+
+    <!-- Botón ver secciones móvil -->
+    <button
+      id="mobile-menu-button"
+      aria-label="Abrir menu"
+      aria-expanded="false"
+      class="lg:hidden flex flex-col justify-center items-center w-10 h-10 gap-1.5"
+    >
+      <span class="block w-6 h-0.5 bg-emerald-800 transition-transform"></span>
+      <span class="block w-6 h-0.5 bg-emerald-800 transition-opacity"></span>
+      <span class="block w-6 h-0.5 bg-emerald-800 transition-transform"></span>
+    </button>
   </div>
+
+  <!-- Menú de secciones de la ppágina (escondido por defecto) -->
+  <nav
+    id="mobile-menu"
+    class="hidden md:hidden flex-col items-stretch gap-2 px-4 pb-4 pt-2 border-t border-border/50"
+  >
+    <a href="#about-us" class="py-2 text-center hover:text-emerald-800 transition-colors">Sobre nosotros</a>
+    <a href="#projects" class="py-2 text-center hover:text-emerald-800 transition-colors">Nuestros proyectos</a>
+    <a href="#contact" class="text-white text-center font-sans px-4 py-2 font-semibold rounded-lg bg-emerald-700 hover:bg-emerald-800 transition-colors">Contacto</a>
+  </nav>
 </header>
+
+<script>
+  const button = document.getElementById('mobile-menu-button');
+  const menu = document.getElementById('mobile-menu');
+
+  // Abrir menú de secciones al hacer click en el botón
+  button?.addEventListener('click', () => {
+    const isOpen = menu?.classList.toggle('hidden') === false;
+    menu?.classList.toggle('flex', isOpen);
+    button.setAttribute('aria-expanded', String(isOpen));
+  });
+
+  // Cerrar menú de secciones al hacer click en alguna
+  menu?.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      menu.classList.add('hidden');
+      menu.classList.remove('flex');
+      button?.setAttribute('aria-expanded', 'false');
+    });
+  });
+</script>
