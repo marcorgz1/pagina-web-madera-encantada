@@ -4,20 +4,20 @@ import OnScrollReveal from 'astro-onscroll-animations';
 import processVideo from '../assets/video.mp4';
 ---
 
-<section id="about-us" class="relative mx-auto max-w-5xl px-6 py-16 scroll-animation scroll-animation-default ">
-    <div class="flex flex-col gap-4">
+<section id="about-us" class="relative mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 py-10 sm:py-14 lg:py-16 scroll-animation scroll-animation-default ">
+    <div class="flex flex-col gap-3 sm:gap-4">
         <h3
-            class="text-emerald-700 text-sm font-semibold tracking-[0.2em] uppercase"
+            class="text-emerald-700 text-xs sm:text-sm font-semibold tracking-[0.2em] uppercase"
         >
             Cómo lo hacemos
         </h3>
-        <h1 class="text-6xl text-amber-800 mb-16">
+        <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-amber-800 mb-8 sm:mb-12 lg:mb-16">
             Proceso de construcción
         </h1>
     </div>
     <!-- Divider -->
-    <div class="w-full h-px bg-stone-200 mb-14"></div>
-    <video class="mx-auto object-cover mb-24" width="600" height="400" muted controls loop>
+    <div class="w-full h-px bg-stone-200 mb-8 sm:mb-12 lg:mb-14"></div>
+    <video class="mx-auto w-full max-w-[600px] h-auto object-cover mb-12 sm:mb-16 lg:mb-24" muted controls loop>
         <source src={processVideo} type="video/mp4" />
     </video>
 

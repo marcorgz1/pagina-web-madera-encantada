@@ -65,26 +65,26 @@ const prefab_houses = [
 const prefab_houses__price = 1300
 ---
 
-<main id="prefab-houses" class="py-24 px-4 scroll-mt-24 scroll-animation scroll-animation-default">
+<main id="prefab-houses" class="py-16 sm:py-20 lg:py-24 px-4 sm:px-6 lg:px-8 scroll-mt-24 scroll-animation scroll-animation-default">
     <div class="max-w-6xl mx-auto">
-        <div class="mb-14 flex flex-col gap-4">
+        <div class="mb-10 sm:mb-12 lg:mb-14 flex flex-col gap-4">
             <div class="flex flex-col gap-2">
                 <p class="text-xs font-medium tracking-widest uppercase text-stone-400 mb-2">Construcción moderna</p>
-                <h1 class="text-5xl font-serif leading-tight text-stone-800 mb-4">
+                <h1 class="text-3xl sm:text-4xl md:text-5xl font-serif leading-tight text-stone-800 mb-4">
                     Casas <span class="text-amber-800">prefabricadas</span>
                 </h1>
             </div>
             <p class="text-stone-500 text-sm leading-relaxed">✦ Diseño inteligente, construcción rápida, hogar real.</p>
         </div>
-        <div class="w-full h-px bg-stone-200 mb-14"></div>
+        <div class="w-full h-px bg-stone-200 mb-10 sm:mb-12 lg:mb-14"></div>
         <div
             id="info-prefab-houses"
-            class="mx-auto max-w-6xl mb-32 scroll-mt-32 scroll-animation scroll-animation-default"
+            class="mx-auto max-w-6xl mb-16 sm:mb-24 lg:mb-32 scroll-mt-32 scroll-animation scroll-animation-default"
         >
-            <h1 class="text-2xl font-serif font-light text-gray-800 border-l-2 border-[#b8895a] pl-6 self-start mb-12">
+            <h1 class="text-xl sm:text-2xl font-serif font-light text-gray-800 border-l-2 border-[#b8895a] pl-4 sm:pl-6 self-start mb-8 sm:mb-12">
                 ¿Qué son las casas prefabricadas?
             </h1>
-            <p class="mb-12">
+            <p class="text-base sm:text-lg leading-relaxed mb-8 sm:mb-12">
                 Son viviendas cuyas piezas o muchas de ellas fueron fabricadas por primera vez en una fábrica. Luego son
                 llevados al lugar donde se realizará la instalación. Una de las principales características de las casas
                 prefabricadas es que están realizadas con materiales y procesos sostenibles. Esta es otra ventaja que lo
@@ -94,14 +94,14 @@ const prefab_houses__price = 1300
                 desde cero teniendo en cuenta los requisitos del cliente. Lo cierto es que independientemente del
                 sistema, aunque ya estén diseñadas e instaladas, las casas prefabricadas se amplían fácilmente.
             </p>
-            <p>
+            <p class="text-base sm:text-lg leading-relaxed">
                 Hacer una casa prefabricada es un proceso relativamente fácil de completar. Pero siempre es importante
                 abordar cada paso con gran responsabilidad para que sirva de base para el siguiente y el resultado final
                 sea de calidad. Asimismo, antes de instalar la casa, es necesario tramitar los permisos de construcción,
                 inspeccionar el tipo de terreno, así como diseñar planos de construcción y cimentación.
             </p>
         </div>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mx-auto w-full mb-18">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8 mx-auto w-full mb-12 sm:mb-16 lg:mb-18">
             {
                 prefab_houses.map(prefab_house => (
                     <Image
@@ -113,16 +113,16 @@ const prefab_houses__price = 1300
                 ))
             }
         </div>
-        <div class="flex flex-col gap-6 mb-20">
-            <div class="flex items-center gap-6">
-                <span class="text-2xl font-light text-stone-400">Desde</span>
+        <div class="flex flex-col gap-6 mb-12 sm:mb-16 lg:mb-20">
+            <div class="flex flex-wrap items-center gap-4 sm:gap-6">
+                <span class="text-xl sm:text-2xl font-light text-stone-400">Desde</span>
                 <div class="w-px h-8 bg-stone-200 self-center"></div>
-                <span class="font-serif text-6xl font-bold text-emerald-800 leading-none">
+                <span class="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold text-emerald-800 leading-none">
                     {prefab_houses__price}
                 </span>
                 <span class="text-stone-400 text-md">€</span>
             </div>
-            <p class="text-amber-800/50">✦ Precios con IVA incluido · Entrega en toda España</p>
+            <p class="text-amber-800/50 text-sm sm:text-base">✦ Precios con IVA incluido · Entrega en toda España</p>
         </div>
         <div class="flex items-center">
             <a

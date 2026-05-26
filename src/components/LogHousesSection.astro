@@ -44,18 +44,18 @@ const log_houses = [
 ]
 ---
 
-<section id="log-houses" class="py-32 px-6 scroll-animation scroll-animation-default">
+<section id="log-houses" class="py-20 sm:py-24 lg:py-32 px-4 sm:px-6 lg:px-8 scroll-animation scroll-animation-default">
     <div class="max-w-6xl mx-auto">
         <!-- ── Header ───────────────────────────────────────────── -->
-        <div class="max-w-7xl mb-20">
-            <h2 class="section-title reveal delay-1 font-serif text-5xl md:text-6xl mb-6">
+        <div class="max-w-7xl mb-12 sm:mb-16 lg:mb-20">
+            <h2 class="section-title reveal delay-1 font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl mb-4 sm:mb-6">
                 <!-- FIX 1: <p> is not valid inside <h2>; changed to <span class="block"> -->
-                <span class="block text-xs font-medium font-sans tracking-widest uppercase text-stone-400 mb-4">
+                <span class="block text-xs font-medium font-sans tracking-widest uppercase text-stone-400 mb-3 sm:mb-4">
                     Construidas por la naturaleza
                 </span>
                 Casas hechas de <span class="text-amber-800">troncos de madera</span>
             </h2>
-            <p class="text-gray-500 max-w-lg">
+            <p class="text-stone-600 max-w-lg text-sm sm:text-base">
                 <span>✦</span>
                 Cada uno de nuestros modelos de casas de troncos está prediseñado para un montaje rápido sin sacrificar 
                 ni un centímetro de calidez o carácter.
@@ -63,13 +63,13 @@ const log_houses = [
         </div>
 
         <!-- ── Separator ───────────────────────────────────────────── -->
-        <div class="w-full h-px bg-stone-200 mb-14"></div>
+        <div class="w-full h-px bg-stone-200 mb-10 sm:mb-12 lg:mb-14"></div>
 
-        <div id="info-log-houses" class="mx-auto max-w-6xl mb-32 scroll-mt-32 scroll-animation scroll-animation-default">
-            <h1 class="text-2xl font-serif font-light text-gray-800 border-l-2 border-[#b8895a] pl-6 self-start mb-12">
+        <div id="info-log-houses" class="mx-auto max-w-6xl mb-16 sm:mb-24 lg:mb-32 scroll-mt-32 scroll-animation scroll-animation-default">
+            <h1 class="text-xl sm:text-2xl font-serif font-light text-gray-800 border-l-2 border-[#b8895a] pl-4 sm:pl-6 self-start mb-8 sm:mb-12">
                 ¿Qué son las casas de troncos de madera?
             </h1>
-            <p class="mb-12">
+            <p class="text-base sm:text-lg leading-relaxed mb-8 sm:mb-12">
                 Son construcciones que combinan técnicas artesanales centenarias con materiales naturales de gran durabilidad. 
                 Elaboradas principalmente con troncos macizos ensamblados, destacan por su excelente aislamiento térmico, resistencia y estética rústica. Estas viviendas reflejan la herencia arquitectónica búlgara, ofreciendo espacios acogedores, sostenibles y 
                 perfectamente integrados en entornos montañosos o naturales. Hoy en día, siguen siendo valoradas tanto por su encanto tradicional como por su eficiencia ecológica.
@@ -77,7 +77,7 @@ const log_houses = [
         </div>
     
         <!-- ── Cards grid ─────────────────────────────────────────── -->
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 mb-12 sm:mb-16">
         {
             log_houses.map((h, i) => (
                 <article
@@ -86,7 +86,7 @@ const log_houses = [
                 >
                     <div class="card-accent"></div>
                     <!-- Image -->
-                    <div class="relative h-52 overflow-hidden">
+                    <div class="relative h-44 sm:h-52 overflow-hidden">
                         <Image
                             src={h.image}
                             alt={h.name}
@@ -99,9 +99,9 @@ const log_houses = [
         }
         </div>
         <!-- ── Footer ───────────────────────────────────────────── -->
-        <div class="flex flex-col gap-12 mb-8">
-            <h3 class=" text-xl font-bold">Pendiente precio</h3>
-            <p class="text-amber-800/50">
+        <div class="flex flex-col gap-8 sm:gap-12 mb-8">
+            <h3 class="text-lg sm:text-xl font-bold">Pendiente precio</h3>
+            <p class="text-amber-800/50 text-sm sm:text-base">
                 ✦ Precios con IVA incluido · Entrega en toda España
             </p>
             <a href="#contact" class="flex items-center w-fit border border-gray-300 px-4 py-2 rounded-lg hover:bg-emerald-800 hover:text-white transition-colors">
