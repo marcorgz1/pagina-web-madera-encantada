@@ -4,9 +4,10 @@ import { Image } from 'astro:assets';
 import { Facebook, Instagram, Twitter } from 'lucide-astro';
 ---
 
-<footer class="bg-gray-900 text-white font-sans">
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 lg:gap-24 mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
-            <div class="flex flex-col sm:items-center gap-6 sm:gap-8 sm:col-span-1 md:col-span-2 lg:col-span-1">
+<footer class="flex flex-col justify-between items-center bg-gray-900 text-white font-sans py-8 sm:py-12">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12 w-full sm:px-12 lg:px-24 xl:px-32">
+            <!-- Company Info Section -->
+            <div class="flex flex-col gap-6 text-center md:text-left">
                 <div>
                     <Image 
                         src={brandLogo} 
@@ -14,7 +15,7 @@ import { Facebook, Instagram, Twitter } from 'lucide-astro';
                         class="w-32 h-28 sm:w-42 sm:h-36 mx-auto md:mx-0"
                     >
                 </div>
-                <p class="text-gray-400 max-w-md leading-relaxed text-sm sm:text-base">
+                <p class="text-gray-400 max-w-md leading-relaxed text-sm sm:text-base mx-auto md:mx-0">
                     Somos una empresa fundada con el objetivo de transformar
                     el concepto tradicional de vivienda, como respuesta a la
                     creciente demanda de soluciones habitacionales más
@@ -23,7 +24,7 @@ import { Facebook, Instagram, Twitter } from 'lucide-astro';
                     contemporáneo, innovación tecnológica y altos estándares
                     de calidad.
                 </p>
-                <div class="flex space-x-4">
+                <div class="flex space-x-4 justify-center md:justify-start">
                     <a href="#" class="text-gray-400 hover:text-emerald-500 transition-colors">
                     <Facebook class="h-6 w-6" />
                     </a>
@@ -36,7 +37,8 @@ import { Facebook, Instagram, Twitter } from 'lucide-astro';
                 </div>
             </div>
 
-            <div>
+            <!-- Quick Links Section -->
+            <div class="flex flex-col text-center md:text-left">
                 <h3 class="text-lg font-bold mb-4">Accesos rápidos</h3>
                 <ul class="space-y-2">
                     <li>
@@ -62,10 +64,11 @@ import { Facebook, Instagram, Twitter } from 'lucide-astro';
                 </ul>
             </div>
 
-            <div class="flex flex-col gap-2">
+            <!-- Contact Section -->
+            <div class="flex flex-col gap-2 text-center md:text-left">
                 <h3 class="text-lg font-bold mb-4">Contacto</h3>
                 <ul class="space-y-6 text-gray-400">
-                    <li class="flex items-center gap-2">
+                    <li class="flex items-center gap-2 justify-center md:justify-start">
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
                                 width="24"
@@ -90,7 +93,7 @@ import { Facebook, Instagram, Twitter } from 'lucide-astro';
                                 >info@maderaencantada.com</a
                             >
                         </li>
-                        <li class="flex gap-4">
+                        <li class="flex justify-center">
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
                                 width="24"
@@ -128,7 +131,7 @@ import { Facebook, Instagram, Twitter } from 'lucide-astro';
             </div>
         </div>
 
-        <div class="border-t border-gray-800 text-center text-gray-400 px-4">            
+        <div class="border-t border-gray-800 text-center text-gray-400 w-full mt-8 mx-6 sm:mx-12 lg:mx-24 xl:mx-32">            
             <p class="py-6 sm:py-8 text-sm sm:text-base">&copy; 2026 Madera Encantada. Todos los derechos reservados.</p>
         </div>
 </footer>
