@@ -5,7 +5,7 @@ import { Facebook, Instagram, Twitter } from 'lucide-astro';
 ---
 
 <footer class="flex flex-col justify-between items-center bg-gray-900 text-white font-sans py-8 sm:py-12">
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12 w-full sm:px-12 lg:px-24 xl:px-32">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-16 lg:gap-12 w-full sm:px-12 lg:px-24 xl:px-32">
             <!-- Company Info Section -->
             <div class="flex flex-col gap-6 text-center md:text-left">
                 <div>
@@ -68,7 +68,7 @@ import { Facebook, Instagram, Twitter } from 'lucide-astro';
             <div class="flex flex-col gap-2 text-center md:text-left">
                 <h3 class="text-lg font-bold mb-4">Contacto</h3>
                 <ul class="space-y-6 text-gray-400">
-                    <li class="flex items-center gap-2 justify-center md:justify-start">
+                    <li class="flex items-center gap-4 justify-center md:justify-start">
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
                                 width="24"
@@ -93,7 +93,7 @@ import { Facebook, Instagram, Twitter } from 'lucide-astro';
                                 >info@maderaencantada.com</a
                             >
                         </li>
-                        <li class="flex justify-center">
+                        <li class="flex justify-center md:justify-start items-center gap-4">
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
                                 width="24"
@@ -110,11 +110,9 @@ import { Facebook, Instagram, Twitter } from 'lucide-astro';
                                     d="M0 0h24v24H0z"
                                     fill="none"></path><path
                                     d="M5 4h4l2 5l-2.5 1.5a11 11 0 0 0 5 5l1.5 -2.5l5 2v4a2 2 0 0 1 -2 2a16 16 0 0 1 -15 -15a2 2 0 0 1 2 -2"
-                                ></path></svg
-                            >
-                            <div
-                                class="flex flex-col gap-2 w-full"
-                            >
+                                ></path>
+                            </svg>
+                            <div class="flex flex-col gap-2">
                                 <a
                                     href="tel:+34652447192"
                                     class="hover:text-emerald-500 transition-colors"
@@ -132,7 +130,7 @@ import { Facebook, Instagram, Twitter } from 'lucide-astro';
         </div>
 
         <div class="border-t border-gray-800 text-center text-gray-400 w-full mt-8 mx-6 sm:mx-12 lg:mx-24 xl:mx-32">            
-            <p class="py-6 sm:py-8 text-sm sm:text-base">&copy; 2026 Madera Encantada. Todos los derechos reservados.</p>
+            <p class="py-6 sm:py-12 text-sm sm:text-base">&copy; 2026 Madera Encantada. Todos los derechos reservados.</p>
         </div>
 </footer>
 
