@@ -9,6 +9,7 @@ import log_house3 from '@/assets/log_houses/log_house3.jpg';
 import log_house4 from '@/assets/log_houses/log_house4.jpg';
 import log_house5 from '@/assets/log_houses/log_house5.png';
 import log_house6 from '@/assets/log_houses/log_house6.jpg';
+import RequestInfo from './RequestInfo.astro';
 
 const log_houses = [
     {
@@ -77,38 +78,21 @@ const log_houses = [
         </div>
     
         <!-- ── Cards grid ─────────────────────────────────────────── -->
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 mb-12 sm:mb-16">
-        {
-            log_houses.map((h, i) => (
-                <article
-                    class={`house-card reveal delay-${i + 2}`}
-                    style={`animation-delay: ${0.2 + i * 0.15}s`}
-                >
-                    <div class="card-accent"></div>
-                    <!-- Image -->
-                    <div class="relative h-44 sm:h-52 overflow-hidden">
-                        <Image
-                            src={h.image}
-                            alt={h.name}
-                            class="card-img w-full h-full object-cover cursor-pointer transition-transform duration-800 hover:scale-110"
-                            loading="lazy"
-                        />
-                    </div>
-                </article>
-            ))
-        }
+        <div class="overflow-x-auto pb-8 -mx-4 px-4 snap-x snap-mandatory mb-16">
+            <div class="flex gap-4 w-max">
+                {log_houses.map((h, i) => (
+                    <article class="snap-center w-md shrink-0 rounded-lg overflow-hidden bg-white shadow-lg">
+                        <div class="h-48 overflow-hidden">
+                            <Image 
+                                src={h.image} 
+                                alt={h.name} 
+                                class="w-full h-full object-cover transition-transform duration-700 hover:scale-105" />
+                        </div>
+                    </article>
+                ))}
+            </div>
         </div>
-        <!-- ── Footer ───────────────────────────────────────────── -->
-        <div class="flex flex-col gap-8 sm:gap-12 mb-8">
-            <h3 class="text-lg sm:text-xl font-bold">Pendiente precio</h3>
-            <p class="text-amber-800/50 text-sm sm:text-base">
-                ✦ Precios con IVA incluido · Entrega en toda España
-            </p>
-            <a href="#contact" class="flex items-center w-fit border border-gray-300 px-4 py-2 rounded-lg hover:bg-emerald-800 hover:text-white transition-colors">
-                Solicitar información
-                <ArrowRight className="ml-2 h-4 w-4" />
-            </a>
-        </div>
+        <RequestInfo />
     </div>
 
     <OnScrollReveal />

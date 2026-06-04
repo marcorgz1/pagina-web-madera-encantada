@@ -11,6 +11,7 @@ import house5 from '@/assets/houses/house5.jpg'
 import house6 from '@/assets/houses/house6.jpeg'
 import house7 from '@/assets/houses/house7.jpg'
 import house8 from '@/assets/houses/house8.jpeg'
+import RequestInfo from './RequestInfo.astro'
 
 const prefab_houses = [
     {
@@ -101,38 +102,33 @@ const prefab_houses__price = 1300
                 inspeccionar el tipo de terreno, así como diseñar planos de construcción y cimentación.
             </p>
         </div>
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8 mx-auto w-full mb-12 sm:mb-16 lg:mb-18">
+        <div class="overflow-x-auto pb-8 -mx-4 px-4 snap-x snap-mandatory mb-16">
+            <div class="flex gap-4 w-max">
             {
                 prefab_houses.map(prefab_house => (
-                    <Image
-                        src={prefab_house.image}
-                        alt={prefab_house.name}
-                        loading="lazy"
-                        class="w-full h-full object-cover transition-transform duration-800 hover:scale-110"
-                    />
+                    <article class="snap-center w-md sm:w-sm rounded-lg overflow-hidden bg-white shadow-lg">
+                        <div class="h-48 overflow-hidden">
+                            <Image
+                                src={prefab_house.image}
+                                alt={prefab_house.name}
+                                loading="lazy"
+                                class="w-full h-full object-cover transition-transform duration-800 hover:scale-110"
+                            />
+                        </div>
+                    </article>
                 ))
             }
-        </div>
-        <div class="flex flex-col gap-6 mb-12 sm:mb-16 lg:mb-20">
-            <div class="flex flex-wrap items-center gap-4 sm:gap-6">
-                <span class="text-xl sm:text-2xl font-light text-stone-400">Desde</span>
-                <div class="w-px h-8 bg-stone-200 self-center"></div>
-                <span class="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold text-emerald-800 leading-none">
-                    {prefab_houses__price}
-                </span>
-                <span class="text-stone-400 text-md">€</span>
             </div>
-            <p class="text-amber-800/50 text-sm sm:text-base">✦ Precios con IVA incluido · Entrega en toda España</p>
         </div>
-        <div class="flex items-center">
-            <a
-                href="#contact"
-                class="flex justify-center items-center border border-gray-300 px-4 py-2 rounded-lg hover:bg-emerald-800 hover:text-white transition-colors"
-            >
-                Solicitar información
-                <ArrowRight className="ml-2 h-4 w-4" />
-            </a>
+        <div class="flex flex-wrap items-center gap-4 sm:gap-6 mb-24">
+            <span class="text-xl sm:text-2xl font-light text-stone-400">Desde</span>
+            <div class="w-px h-8 bg-stone-200 self-center"></div>
+            <span class="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold text-emerald-800 leading-none">
+                {prefab_houses__price}
+            </span>
+            <span class="text-stone-400 text-md">€</span>
         </div>
+        <RequestInfo />
     </div>
 
     <OnScrollReveal />
