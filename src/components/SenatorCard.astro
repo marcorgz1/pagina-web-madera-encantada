@@ -4,15 +4,15 @@ const { name, image, price } = Astro.props
 ---
 
 <article
-    class="group relative flex flex-col bg-white overflow-hidden rounded-2xl shadow-sm hover:shadow-2xl transition-all duration-500 hover:-translate-y-1.5 border border-stone-100"
+    class="group relative flex flex-col bg-white overflow-hidden rounded-2xl shadow-sm hover:shadow-2xl transition-all duration-500 hover:-translate-y-1.5 py-4 border border-stone-100 md:max-w-xl"
 >
     <!-- Image wrapper -->
-    <div class="relative overflow-hidden aspect-[4/3] bg-stone-50">
+    <div class="relative overflow-hidden bg-stone-50">
         <Image
             src={image}
             alt={name}
             loading="lazy"
-            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+            class="md:max-w-[80%] max-w-full h-full mx-auto object-cover transition-transform duration-700 group-hover:scale-105"
         />
         <!-- Subtle gradient overlay at bottom of image -->
         <div

@@ -30,7 +30,7 @@ const features = [
 
 <section>
     <div id="about-us" class="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 mb-16 sm:mb-24 lg:mb-36 scroll-mt-32 scroll-animation scroll-animation-default delay-600">
-        <div class="flex flex-col gap-3 sm:gap-4">
+        <div class="flex flex-col gap-3 sm:gap-4 ml-12 md:ml-0">
             <h3 class="text-emerald-700 text-xs sm:text-sm font-semibold tracking-[0.2em] uppercase">Información</h3>
             <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-amber-800">
                 Sobre nosotros
@@ -44,9 +44,11 @@ const features = [
             A lo largo de los años, hemos evolucionado junto al mercado, incorporando nuevas técnicas constructivas y materiales sostenibles, posicionándonos como una alternativa sólida frente a la construcción tradicional. Hoy, seguimos comprometidos con la innovación y el diseño, acompañando a cada cliente en el proceso de crear un hogar único, funcional y preparado para el futuro.
         </h3>
     </div>
+
     <ConstructionProcess />
+
     <div id="why-choose-us" class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 mb-24 sm:mb-36 lg:mb-56 scroll-mt-32 scroll-animation scroll-animation-default">
-        <div class="flex flex-col gap-3 sm:gap-4">
+        <div class="flex flex-col gap-3 sm:gap-4 ml-6 md:ml-0">
             <h3 class="text-emerald-700 text-xs sm:text-sm font-semibold tracking-[0.2em] uppercase">Sobre nosotros</h3>
             <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-amber-800 font-medium mb-8 sm:mb-12 lg:mb-16">
                 ¿Por qué elegir Madera Encantada?
@@ -59,7 +61,7 @@ const features = [
             Desde nuestros inicios, hemos trabajado bajo un modelo de fabricación en entornos controlados, lo que permite optimizar tiempos, reducir costes y garantizar una ejecución precisa en cada proyecto. Este enfoque, cada vez más consolidado en el sector, ofrece viviendas personalizables, energéticamente eficientes y adaptadas a las necesidades actuales de nuestros clientes.
             A lo largo de los años, hemos evolucionado junto al mercado, incorporando nuevas técnicas constructivas y materiales sostenibles, posicionándonos como una alternativa sólida frente a la construcción tradicional. Hoy, seguimos comprometidos con la innovación y el diseño, acompañando a cada cliente en el proceso de crear un hogar único, funcional y preparado para el futuro.
         </p>
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 lg:gap-12">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 lg:gap-12 mx-auto max-w-lg md:max-w-full">
         {
             features.map((feature) => (
                 <div class="text-center p-6 sm:p-8 lg:p-10 rounded-xl bg-linear-to-br from-emerald-50 to-teal-50 hover:shadow-lg transition-shadow">
