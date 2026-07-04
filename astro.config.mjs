@@ -10,5 +10,18 @@ export default defineConfig({
         ]
     },
     output: 'static',
-    site: 'https://madera-encantada.com'
+    site: 'https://madera-encantada.com',
+    image: {
+        // Sharp (a tool for images optimizations)
+        service: {
+            entrypoint: 'astro/assets/services/sharp'
+        }
+    },
+    // Prefetch links on hover for faster navigation
+    prefetch: {
+        prefetchAll: true,
+        defaultStrategy: 'hover'
+    },
+    // Compress HTML output
+    compressHTML: true
 });

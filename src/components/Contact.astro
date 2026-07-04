@@ -1,32 +1,32 @@
 ---
-import { Mail, MapPin, Phone } from '@lucide/astro';
+import { Mail, MapPin, PhoneCallIcon } from '@lucide/astro';
 import OnScrollReveal from 'astro-onscroll-animations';
 ---
 
 <section id="contact" class="scroll-mt-48 px-4 sm:px-6 lg:px-8 scroll-animation scroll-animation-default">
     <div class="flex justify-center items-center mb-24 sm:mb-32 lg:mb-48">
-        <div class="flex flex-col max-w-6xl w-full gap-8 sm:gap-12">
-            <div class="flex flex-col gap-4 sm:gap-6 mb-10 sm:mb-14 lg:mb-16">
+        <div class="flex flex-col max-w-6xl md:max-w-xl sm:max-w-lg w-full gap-8 sm:gap-12">
+            <div class="flex flex-col gap-2 mb-10 sm:mb-14 lg:mb-16">
                 <h3
                     class="text-emerald-700 text-xs sm:text-sm font-semibold tracking-[0.2em] uppercase"
                 >
                     Contáctanos
                 </h3>
                 <h1
-                    class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-amber-800"
+                    class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-amber-800 mb-8"
                 >
                     Vamos a planificar tu nueva casa
                     <br />
                 </h1>
-                <span class="text-base sm:text-lg lg:text-xl text-stone-600">
+                <span class="text-base text-stone-600">
                     ¿Tienes alguna duda? Nuestro equipo estará encantado de
                     ayudarte a escoger tu casa perfecta.
                 </span>
             </div>
-            <div class="mb-12 sm:mb-16 lg:mb-24">
-                <ul class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-12 w-full">
+            <div class="mb-12">
+                <ul class="grid grid-cols-2 md:grid-cols-1 sm:grid-cols-1 gap-6">
                     <li class="flex items-center w-full px-6 sm:px-8 py-6 border border-gray-200 shadow-sm rounded-2xl gap-6 sm:gap-8 hover:shadow-md">
-                        <div class="w-12 h-12 bg-emerald-50 rounded-lg flex items-center justify-center flex-shrink-0">
+                        <div class="w-12 h-12 bg-emerald-50 rounded-lg flex items-center justify-center shrink-0">
                             <Mail class="w-6 h-6 text-emerald-800" />
                         </div>
                         <div class="flex flex-col gap-2 min-w-0">
@@ -40,8 +40,8 @@ import OnScrollReveal from 'astro-onscroll-animations';
 
                     </li>
                     <li class="flex items-center gap-6 sm:gap-8 w-full px-6 sm:px-8 py-6 border border-gray-200 shadow-sm rounded-2xl hover:shadow-md">
-                        <div class="w-12 h-12 bg-emerald-50 rounded-lg flex items-center justify-center flex-shrink-0">
-                            <Phone class="w-6 h-6 text-emerald-800" />
+                        <div class="w-12 h-12 bg-emerald-50 rounded-lg flex items-center justify-center shrink-0">
+                            <PhoneCallIcon class="w-6 h-6 text-emerald-800" />
                         </div>
                         <div class="flex flex-col gap-2">
                             <p class="text-gray-400 uppercase text-sm">Llámanos</p>
@@ -61,8 +61,8 @@ import OnScrollReveal from 'astro-onscroll-animations';
                             </div>
                         </div>
                     </li>
-                    <li class="flex items-center px-6 sm:px-8 py-6 border border-gray-200 shadow-sm w-full rounded-2xl gap-6 sm:gap-8 hover:shadow-md md:col-span-2 lg:col-span-1">
-                        <div class="w-12 h-12 bg-emerald-50 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <li class="flex items-center px-6 sm:px-8 py-6 border border-gray-200 shadow-sm w-full rounded-2xl gap-6 col-span-2 md:col-span-1 sm:col-span-1 sm:gap-8 hover:shadow-md">
+                        <div class="w-12 h-12 bg-emerald-50 rounded-lg flex items-center justify-center shrink-0">
                             <MapPin class="w-6 h-6 text-emerald-800" />
                         </div>
                         <div class="flex flex-col gap-2">

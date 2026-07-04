@@ -17,6 +17,11 @@ const { houses, interval } = Astro.props;
     <Image
         src={src}
         alt={`hero house image ${index + 1}`}
+        width={1920}
+        height={1080}
+        loading={index === 0 ? "eager" : "lazy"}
+        fetchpriority={index === 0 ? "high" : "low"}
+        decoding={index === 0 ? "sync" : "async"}
         class:list={[
         "absolute inset-0 w-full h-full object-cover transition-opacity duration-1000",
         index === 0 ? "opacity-100" : "opacity-0"
