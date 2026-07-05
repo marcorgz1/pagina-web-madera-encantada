@@ -27,17 +27,21 @@ const features = [
     }
 ];
 ---
-
-<section class="w-full md:max-w-2xl sm:max-w-lg mx-auto">
+<!-- 
+max-w-md: se aplica a pantallas de -640px
+sm:max-w-lg: se aplica a pantallas de +=640 -768px
+md:max-w-6xl se aplica a pantallas de =+768px
+-->
+<section class="max-w-md sm:max-w-xl md:max-w-6xl mx-auto">
     <div id="about-us" class="mb-24 scroll-mt-32 scroll-animation scroll-animation-default delay-600">
-        <div class="flex flex-col gap-3 sm:gap-4">
+        <div class="flex flex-col gap-3 sm:gap-4 mb-8">
             <h3 class="text-emerald-700 text-xs sm:text-sm font-semibold tracking-[0.2em] uppercase">Información</h3>
             <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-amber-800">
                 Sobre nosotros
             </h1>
         </div>
         <!-- Divider -->
-        <div class="w-full h-px bg-stone-200 my-8 sm:my-12 lg:mb-14"></div>
+        <div class="w-full h-px bg-stone-200 mb-8"></div>
         <h3 class="text-lg sm:text-md leading-relaxed">
             Somos una empresa fundada con el objetivo de transformar el concepto tradicional de vivienda, nuestra empresa nace en España como respuesta a la creciente demanda de soluciones habitacionales más eficientes, sostenibles y accesibles. Inspirados por la evolución de la construcción industrializada, apostamos por el desarrollo de casas prefabricadas que combinan diseño contemporáneo, innovación tecnológica y altos estándares de calidad.
             Desde nuestros inicios, hemos trabajado bajo un modelo de fabricación en entornos controlados, lo que permite optimizar tiempos, reducir costes y garantizar una ejecución precisa en cada proyecto. Este enfoque, cada vez más consolidado en el sector, ofrece viviendas personalizables, energéticamente eficientes y adaptadas a las necesidades actuales de nuestros clientes.
@@ -47,10 +51,10 @@ const features = [
 
     <ConstructionProcess />
 
-    <div id="why-choose-us" class="mx-auto max-w-6xl md:max-w-2xl sm:max-w-lg mb-24 scroll-mt-32 scroll-animation scroll-animation-default">
-        <div class="flex flex-col gap-3 sm:gap-4 ml-6">
+    <div id="why-choose-us" class="mx-auto max-w-md sm:max-w-xl md:max-w-6xl mb-24 scroll-mt-32 scroll-animation scroll-animation-default">
+        <div class="flex flex-col gap-3 sm:gap-4 mb-8">
             <h3 class="text-emerald-700 text-xs sm:text-sm font-semibold tracking-[0.2em] uppercase">Sobre nosotros</h3>
-            <h1 class="text-3xl sm:text-4xl md:text-5xl text-amber-800 font-medium mb-8">
+            <h1 class="text-3xl sm:text-4xl md:text-5xl text-amber-800 font-medium">
                 ¿Por qué elegir Madera Encantada?
             </h1>
         </div>
