@@ -16,14 +16,12 @@ import processVideo from '../assets/video.mp4';
         </h1>
     </div>
     <!-- Divider -->
-    <div class="w-full h-px bg-stone-200 mb-8"></div>
+    <div class="w-full h-px bg-stone-200 mb-12"></div>
     <video 
         class="mx-auto w-md sm:w-lg md:w-2xl rounded-lg mb-12"
         muted 
         controls 
         loop
-        preload="none"
-        transition:persist
     >
         <source src={processVideo} type="video/mp4" />
     </video>
